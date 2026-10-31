@@ -1,44 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>V86 PLAY LIST</title>
-<link rel="manifest" href="manifest.json">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263470788888608" crossorigin="anonymous"></script>
+<title>🎵 V86 PLAY LIST - Toca Músicas e Vídeos do Celular - Sem Anúncio</title>
+<meta name="description" content="V86 PLAY LIST grátis: adicione músicas e vídeos do celular, toca direto, aleatório, repetir, lista salva no celular IndexedDB, sem anúncio, compartilha no WhatsApp.">
+<link rel="canonical" href="https://bancogratidao.com.br/v86-play/">
 <meta name="theme-color" content="#FFD700">
+<link rel="manifest" href="./manifest.json">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#000;color:#fff;padding-bottom:20px}
-.topo{background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;padding:20px;text-align:center}
-.player-box{margin:15px;background:#111;border-radius:16px;overflow:hidden;border:2px solid #FFD700}
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
+body{background:#050505;color:#fff;padding-bottom:90px;padding-top:105px}
+.barra-fixa{position:fixed;top:0;left:0;right:0;background:#000;padding:10px 12px;border-bottom:3px solid #FFD700;z-index:999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.tag{font-size:9px;font-weight:900;background:#FFD700;color:#000;padding:5px 10px;border-radius:20px}
+.conteudo-editor{background:#111;border:1px solid #FFD700;border-radius:12px;padding:12px;margin:10px}
+.conteudo-editor h2{font-size:13px;color:#FFD700;margin:0 0 6px}
+.conteudo-editor p{font-size:11px;line-height:16px;color:#ccc;margin:0 0 6px}
+.alert{background:#1a1500;border:1px solid #FFD700;border-radius:12px;padding:12px;margin:10px;font-size:11px;color:#ffeeaa}
+.ad-box{background:#0a0a0a;border:1px dashed #FFD700;border-radius:12px;padding:10px;text-align:center;margin:12px 10px}
+.topo{background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;padding:16px;text-align:center;border-radius:12px;margin:10px}
+.player-box{margin:10px;background:#111;border-radius:16px;overflow:hidden;border:2px solid #FFD700}
 #player{width:100%;height:220px;background:#000}
 .controles{display:flex;justify-content:space-around;align-items:center;padding:15px;background:#1a1a1a}
-.btn-ctrl{background:#FFD700;color:#000;border:none;width:50px;height:50px;border-radius:50%;font-size:20px;font-weight:bold}
-.btn-play{background:#FFD700;color:#000;border:none;width:70px;height:70px;border-radius:50%;font-size:30px;font-weight:bold}
-.btn-shuffle{background:#222;color:#fff;border:2px solid #444;width:45px;height:45px;border-radius:50%;font-size:18px}
+.btn-ctrl{background:#FFD700;color:#000;border:none;width:50px;height:50px;border-radius:50%;font-size:20px;font-weight:900;cursor:pointer}
+.btn-play{background:#FFD700;color:#000;border:none;width:70px;height:70px;border-radius:50%;font-size:28px;font-weight:900;cursor:pointer}
+.btn-shuffle{background:#222;color:#fff;border:2px solid #444;width:45px;height:45px;border-radius:50%;font-size:18px;cursor:pointer}
 .btn-shuffle.ativo{background:#25D366;color:#fff;border-color:#25D366}
-.info-musica{padding:15px;text-align:center}
-.info-musica h3{color:#FFD700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.btn-add{display:block;width:calc(100% - 30px);margin:15px;padding:16px;background:#25D366;color:white;border:none;border-radius:12px;font-weight:bold;font-size:16px;text-align:center}
-.lista{margin:15px}
+.info-musica{padding:12px;text-align:center}
+.info-musica h3{color:#FFD700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px}
+.btn-add{display:block;width:calc(100% - 20px);margin:10px;padding:16px;background:#25D366;color:white;border:none;border-radius:12px;font-weight:900;font-size:15px;text-align:center;cursor:pointer}
+.lista{margin:10px}
 .item{background:#1a1a1a;padding:12px;border-radius:10px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;border-left:4px solid #FFD700}
 .item.ativo{background:#332b00;border-left-color:#25D366}
-.item b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px}
-.item span{font-size:12px;color:#888}
-.bloco-share{background:linear-gradient(135deg,#FFD700,#FFA500);margin:15px;padding:20px;border-radius:16px;text-align:center;color:#000}
+.item b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px;font-size:13px}
+.item span{font-size:11px;color:#888}
+.bloco-share{background:linear-gradient(135deg,#FFD700,#FFA500);margin:10px;padding:18px;border-radius:16px;text-align:center;color:#000}
+.footer{max-width:1000px;margin:20px auto;text-align:center;border-top:2px solid #FFD700;padding:14px}
+.footer a{color:#FFD700;text-decoration:none;font-size:11px;margin:0 6px;font-weight:800}
+.fab-mini{position:fixed;bottom:20px;right:15px;z-index:99999;background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;width:60px;height:60px;border-radius:50%;border:2px solid #fff;display:none;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 12px rgba(0,0,0,.7);cursor:pointer}
 </style>
 </head>
 <body>
+
+<div class="barra-fixa">
+<div style="display:flex;align-items:center;gap:8px"><div style="font-weight:900;color:#FFD700;font-size:12px">🎵 V86 PLAY</div><span class="tag" id="contadorTag">0 MÚSICAS</span></div>
+<div style="display:flex;gap:6px">
+<span class="tag" style="background:#25D366;color:#fff">SEM ANÚNCIO</span>
+<a href="/" style="background:#222;color:#fff;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:900;text-decoration:none">✕ FECHAR</a>
+</div>
+</div>
+
+<div class="conteudo-editor">
+<h2>V86 PLAY LIST - Seu Player de Músicas e Vídeos Direto do Celular Sem Anúncio</h2>
+<p>Quer ouvir música sem anúncio chato? O V86 PLAY LIST do Banco Gratidão é grátis: adicione músicas e vídeos direto do celular, salva no celular via IndexedDB, toca mesmo offline, modo aleatório 🔀 e repetir 🔁, próximo e anterior.</p>
+<p>Como usar: toque em Adicionar Músicas e Vídeos, escolha do celular, toque na lista pra tocar. Player com controles completo, compartilha no WhatsApp, instala como app. Tudo seu, sem anúncio, sem internet. Salve: bancogratidao.com.br/v86-play/</p>
+</div>
+
+<div class="alert">🎵 DICA: Adicione suas músicas favoritas uma vez, fica salvo pra sempre no celular. Use 🔀 aleatório e 🔁 repetir pra curtir. Toca vídeo também!</div>
+
+<div class="ad-box"><small>PUBLICIDADE</small>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2263470788888608" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
 <div class="topo">
-<h1>V86 PLAY LIST 🎵</h1>
-<p>Seu som direto do celular</p>
+<h1 style="font-size:18px">V86 PLAY LIST 🎵</h1>
+<p style="font-size:12px;font-weight:800">Seu som direto do celular - Sem anúncio - Offline</p>
 </div>
 
 <div class="player-box">
 <video id="player" controls playsinline></video>
 <div class="info-musica">
 <h3 id="nomeAtual">Nenhuma música selecionada</h3>
-<p id="contador" style="font-size:12px;color:#888">0 músicas</p>
+<p id="contador" style="font-size:11px;color:#888">0 músicas - Adicione acima</p>
 </div>
 <div class="controles">
 <button class="btn-shuffle" id="btnShuffle" onclick="toggleShuffle()" title="Aleatório">🔀</button>
@@ -50,242 +85,133 @@ body{background:#000;color:#fff;padding-bottom:20px}
 </div>
 
 <input type="file" id="inputFile" accept="audio/*,video/*" multiple style="display:none">
-<button class="btn-add" onclick="document.getElementById('inputFile').click()">➕ Adicionar Músicas e Vídeos do Celular</button>
+<button class="btn-add" onclick="document.getElementById('inputFile').click()">➕ ADICIONAR MÚSICAS E VÍDEOS DO CELULAR</button>
 
 <div class="lista" id="lista"></div>
 
-<!-- NOVO BLOCO COMPARTILHAR E ALEATÓRIO -->
-<div class="bloco-share">
-<h3 style="margin:0 0 10px 0;">Curtiu a playlist? 💰</h3>
-<p style="margin:0 0 15px 0;font-size:14px">Compartilhe o V86 PLAY com os amigos!</p>
-<button onclick="tocarAleatorio()" style="width:100%;padding:12px;margin-bottom:10px;background:#000;color:#FFD700;border:none;border-radius:10px;font-weight:bold;font-size:15px;">🔀 Tocar Músicas Aleatoriamente</button>
-<button onclick="compartilharApp()" style="width:100%;padding:12px;margin-bottom:10px;background:#25D366;color:white;border:none;border-radius:10px;font-weight:bold;font-size:15px;">💚 Compartilhar no WhatsApp</button>
-<button onclick="compartilharApp()" style="width:100%;padding:12px;background:#000;color:#FFD700;border:none;border-radius:10px;font-weight:bold;font-size:15px;">👥 Convidar Amigo</button>
-<p style="margin-top:15px;font-size:12px"><a href="privacidade.html" style="color:#000;text-decoration:underline">🔒 Política de Privacidade</a></p>
+<div class="ad-box"><small>PUBLICIDADE - MEIO</small>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2263470788888608" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
-<button id="btnInstalar" style="display:none; width: calc(100% - 30px); margin: 15px; padding: 14px; background: #ffcc00; color: #000; border: none; border-radius: 12px; font-weight: bold; font-size: 16px;">📲 Instalar App V86 PLAY</button>
+<div class="bloco-share">
+<h3 style="margin:0 0 8px 0;font-size:15px">Curtiu a playlist? 💰</h3>
+<p style="margin:0 0 12px 0;font-size:12px;font-weight:700">Compartilhe o V86 PLAY com os amigos!</p>
+<button onclick="tocarAleatorio()" style="width:100%;padding:12px;margin-bottom:8px;background:#000;color:#FFD700;border:none;border-radius:10px;font-weight:900;font-size:13px;cursor:pointer">🔀 TOCAR MÚSICAS ALEATORIAMENTE</button>
+<button onclick="compartilharApp()" style="width:100%;padding:12px;margin-bottom:8px;background:#25D366;color:white;border:none;border-radius:10px;font-weight:900;font-size:13px;cursor:pointer">💚 COMPARTILHAR NO WHATSAPP</button>
+<button onclick="compartilharApp()" style="width:100%;padding:12px;background:#000;color:#FFD700;border:none;border-radius:10px;font-weight:900;font-size:13px;cursor:pointer">👥 CONVIDAR AMIGO</button>
+<p style="margin-top:12px;font-size:11px"><a href="/privacidade/" style="color:#000;text-decoration:underline;font-weight:800">🔒 Política de Privacidade</a> | <a href="/" style="color:#000;text-decoration:underline;font-weight:800">🏠 Portal do Povo</a></p>
+</div>
+
+<button id="btnInstalar" style="display:none; width: calc(100% - 20px); margin: 10px; padding: 14px; background: #FFD700; color: #000; border: none; border-radius: 12px; font-weight: 900; font-size: 14px;cursor:pointer">📲 INSTALAR APP V86 PLAY</button>
+
+<div class="ad-box"><small>PUBLICIDADE - RODAPÉ</small>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2263470788888608" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<footer class="footer">
+<a href="/">🏠 PORTAL</a>
+<a href="/privacidade/">🔒 PRIVACIDADE</a>
+<a href="/contato/">📞 CONTATO</a>
+<p style="color:#888;font-size:10px;margin-top:8px">Músicas salvas no celular via IndexedDB - Toca offline - Sem anúncio - 100% grátis</p>
+</footer>
 
 <script>
-let db;
-let musicas = [];
-let indiceAtual = -1;
-let urls = {};
-let modoAleatorio = false;
-let modoLoop = false;
-
+let db; let musicas = []; let indiceAtual = -1; let urls = {}; let modoAleatorio = false; let modoLoop = false;
 const request = indexedDB.open('V86PlayDB', 1);
-request.onupgradeneeded = e => {
-  e.target.result.createObjectStore('musicas', {keyPath: 'id', autoIncrement: true});
-};
-request.onsuccess = e => {
-  db = e.target.result;
-  carregarMusicas();
-};
-
+request.onupgradeneeded = e => { e.target.result.createObjectStore('musicas', {keyPath: 'id', autoIncrement: true}); };
+request.onsuccess = e => { db = e.target.result; carregarMusicas(); };
 function carregarMusicas(){
-  const tx = db.transaction('musicas', 'readonly');
-  const store = tx.objectStore('musicas');
-  const req = store.getAll();
+  const tx = db.transaction('musicas', 'readonly'); const store = tx.objectStore('musicas'); const req = store.getAll();
   req.onsuccess = () => {
     musicas = req.result;
-    musicas.forEach(m => {
-      if(urls[m.id]) URL.revokeObjectURL(urls[m.id]);
-      urls[m.id] = URL.createObjectURL(m.blob);
-    });
+    musicas.forEach(m => { if(urls[m.id]) URL.revokeObjectURL(urls[m.id]); urls[m.id] = URL.createObjectURL(m.blob); });
     atualizarLista();
   };
 }
-
 document.getElementById('inputFile').addEventListener('change', async (e)=>{
-  const arquivos = e.target.files;
-  if(!arquivos.length) return;
-  const tx = db.transaction('musicas', 'readwrite');
-  const store = tx.objectStore('musicas');
-  for(let file of arquivos){
-    await new Promise(res=>{
-      const r = store.add({nome: file.name, tipo: file.type, blob: file});
-      r.onsuccess = res;
-    });
-  }
-  tx.oncomplete = carregarMusicas;
-  e.target.value = '';
+  const arquivos = e.target.files; if(!arquivos.length) return;
+  const tx = db.transaction('musicas', 'readwrite'); const store = tx.objectStore('musicas');
+  for(let file of arquivos){ await new Promise(res=>{ const r = store.add({nome: file.name, tipo: file.type, blob: file}); r.onsuccess = res; }); }
+  tx.oncomplete = carregarMusicas; e.target.value = '';
 });
-
 function atualizarLista(){
   const lista = document.getElementById('lista');
   document.getElementById('contador').innerText = musicas.length + ' músicas/vídeos' + (modoAleatorio? ' • 🔀 Aleatório' : '');
+  document.getElementById('contadorTag').innerText = musicas.length + ' MÚSICAS';
   lista.innerHTML = '';
+  if(musicas.length===0){lista.innerHTML='<div style="text-align:center;color:#666;padding:20px">Nenhuma música ainda.<br><small>Toque em Adicionar acima</small></div>';return}
   musicas.forEach((m, i)=>{
     const ativo = i === indiceAtual? 'ativo' : '';
-    lista.innerHTML += `<div class="item ${ativo}" onclick="tocar(${i})"><div><b>${m.nome}</b><span>${m.tipo.includes('video')? '🎬 Vídeo' : '🎵 Áudio'}</span></div><div><span onclick="event.stopPropagation(); remover(${m.id})" style="color:red;padding:10px">🗑️</span></div></div>`;
+    lista.innerHTML += `<div class="item ${ativo}" onclick="tocar(${i})"><div><b>${m.nome}</b><span>${m.tipo.includes('video')? '🎬 Vídeo' : '🎵 Áudio'} • ${m.tipo}</span></div><div><span onclick="event.stopPropagation(); remover(${m.id})" style="color:#ff4444;padding:10px;cursor:pointer;font-weight:900">🗑️</span></div></div>`;
   });
 }
-
 function tocar(i){
-  indiceAtual = i;
-  const m = musicas[i];
-  const player = document.getElementById('player');
-  player.src = urls[m.id];
-  player.play();
+  indiceAtual = i; const m = musicas[i]; const player = document.getElementById('player');
+  player.src = urls[m.id]; player.play();
   document.getElementById('nomeAtual').innerText = m.nome;
-  document.getElementById('btnPlay').innerText = '⏸️';
-  atualizarLista();
+  document.getElementById('btnPlay').innerText = '⏸️'; atualizarLista();
 }
-
 function playPause(){
   const player = document.getElementById('player');
   if(player.paused){
-    if(indiceAtual === -1 && musicas.length > 0){
-      if(modoAleatorio) tocarAleatorio();
-      else tocar(0);
-    } else player.play();
+    if(indiceAtual === -1 && musicas.length > 0){ if(modoAleatorio) tocarAleatorio(); else tocar(0); }
+    else if(player.src) player.play();
     document.getElementById('btnPlay').innerText = '⏸️';
-  } else {
-    player.pause();
-    document.getElementById('btnPlay').innerText = '▶️';
-  }
+  } else { player.pause(); document.getElementById('btnPlay').innerText = '▶️'; }
 }
-
-function proxima(){
-  if(!musicas.length) return;
-  if(modoAleatorio){
-    tocarAleatorio();
-    return;
-  }
-  let prox = indiceAtual + 1;
-  if(prox >= musicas.length) prox = 0;
-  tocar(prox);
-}
-
-function anterior(){
-  if(!musicas.length) return;
-  if(modoAleatorio){
-    tocarAleatorio();
-    return;
-  }
-  let ant = indiceAtual - 1;
-  if(ant < 0) ant = musicas.length - 1;
-  tocar(ant);
-}
-
+function proxima(){ if(!musicas.length) return; if(modoAleatorio){ tocarAleatorio(); return; } let prox = indiceAtual + 1; if(prox >= musicas.length) prox = 0; tocar(prox); }
+function anterior(){ if(!musicas.length) return; if(modoAleatorio){ tocarAleatorio(); return; } let ant = indiceAtual - 1; if(ant < 0) ant = musicas.length - 1; tocar(ant); }
 function tocarAleatorio(){
-  if(!musicas.length) return alert('Adicione músicas primeiro!');
-  let novoIndice;
-  do{
-    novoIndice = Math.floor(Math.random() * musicas.length);
-  } while(musicas.length > 1 && novoIndice === indiceAtual);
-  tocar(novoIndice);
-  if(!modoAleatorio) toggleShuffle();
+  if(!musicas.length) return alert('Adicione músicas primeiro! Toque em Adicionar acima.');
+  let novoIndice; do{ novoIndice = Math.floor(Math.random() * musicas.length); } while(musicas.length > 1 && novoIndice === indiceAtual);
+  tocar(novoIndice); if(!modoAleatorio) toggleShuffle();
 }
-
 function toggleShuffle(){
-  modoAleatorio =!modoAleatorio;
-  const btn = document.getElementById('btnShuffle');
-  if(modoAleatorio){
-    btn.classList.add('ativo');
-    btn.style.background = '#25D366';
-  } else {
-    btn.classList.remove('ativo');
-    btn.style.background = '#222';
-  }
+  modoAleatorio =!modoAleatorio; const btn = document.getElementById('btnShuffle');
+  if(modoAleatorio){ btn.classList.add('ativo'); btn.style.background = '#25D366'; } else { btn.classList.remove('ativo'); btn.style.background = '#222'; }
   atualizarLista();
 }
-
 function toggleLoop(){
-  modoLoop =!modoLoop;
-  const player = document.getElementById('player');
-  const btn = document.getElementById('btnLoop');
+  modoLoop =!modoLoop; const player = document.getElementById('player'); const btn = document.getElementById('btnLoop');
   player.loop = modoLoop;
-  if(modoLoop){
-    btn.classList.add('ativo');
-    btn.style.background = '#FFD700';
-    btn.style.color = '#000';
-  } else {
-    btn.classList.remove('ativo');
-    btn.style.background = '#222';
-    btn.style.color = '#fff';
-  }
+  if(modoLoop){ btn.classList.add('ativo'); btn.style.background = '#FFD700'; btn.style.color = '#000'; } else { btn.classList.remove('ativo'); btn.style.background = '#222'; btn.style.color = '#fff'; }
 }
-
 function remover(id){
-  if(!confirm('Remover essa música?')) return;
-  const tx = db.transaction('musicas', 'readwrite');
-  tx.objectStore('musicas').delete(id);
+  if(!confirm('Remover essa música/vídeo?')) return;
+  const tx = db.transaction('musicas', 'readwrite'); tx.objectStore('musicas').delete(id);
   tx.oncomplete = ()=>{
-    URL.revokeObjectURL(urls[id]);
-    delete urls[id];
+    URL.revokeObjectURL(urls[id]); delete urls[id];
     if(musicas[indiceAtual] && musicas[indiceAtual].id === id){
-      document.getElementById('player').pause();
-      document.getElementById('player').src = '';
-      indiceAtual = -1;
-      document.getElementById('nomeAtual').innerText = 'Nenhuma música selecionada';
+      document.getElementById('player').pause(); document.getElementById('player').src = ''; indiceAtual = -1;
+      document.getElementById('nomeAtual').innerText = 'Nenhuma música selecionada'; document.getElementById('btnPlay').innerText='▶️';
     }
     carregarMusicas();
   };
 }
-
-document.getElementById('player').addEventListener('ended', ()=>{
-  if(modoLoop) return;
-  proxima();
-});
-
-// COMPARTILHAR
+document.getElementById('player').addEventListener('ended', ()=>{ if(modoLoop) return; proxima(); });
 function compartilharApp() {
-  const url = window.location.href;
-  const texto = 'Baixa o V86 PLAY LIST! Meu app de música que toca direto do celular, sem anúncio: ';
-  if (navigator.share) {
-    navigator.share({ title: 'V86 PLAY LIST', text: texto, url: url });
-  } else {
-    const msg = encodeURIComponent(texto + url);
-    window.open('https://wa.me/?text=' + msg, '_blank');
-  }
+  const url = window.location.href; const texto = 'Baixa o V86 PLAY LIST! Meu app de música que toca direto do celular, sem anúncio, offline: ';
+  if (navigator.share) { navigator.share({ title: 'V86 PLAY LIST', text: texto, url: url }); }
+  else { const msg = encodeURIComponent(texto + url); window.open('https://wa.me/?text=' + msg, '_blank'); }
 }
-
-// INSTALAR
 let appParaInstalar = null;
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  appParaInstalar = e;
-  document.getElementById('btnInstalar').style.display = 'block';
-});
+window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); appParaInstalar = e; document.getElementById('btnInstalar').style.display = 'block'; const fab=document.getElementById('fabMini'); if(fab) fab.style.display='flex'; });
 document.getElementById('btnInstalar').addEventListener('click', async () => {
-  if (!appParaInstalar) return;
-  appParaInstalar.prompt();
-  await appParaInstalar.userChoice;
-  document.getElementById('btnInstalar').style.display = 'none';
-  appParaInstalar = null;
+  if (!appParaInstalar) return; appParaInstalar.prompt(); await appParaInstalar.userChoice;
+  document.getElementById('btnInstalar').style.display = 'none'; appParaInstalar = null;
 });
-
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js');
-}
+if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js').catch(()=>{}); }
 </script>
-  {
-  "name": "VAGAS - Portal do Povo",
-  "short_name": "Vagas",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#000",
-  "theme_color": "#FFD700",
-  "icons": [{"src": "../icon.png","sizes":"192x192","type":"image/png"}]
-}
-  <link rel="manifest" href="./manifest.json">
-<style>.fab-mini{position:fixed;bottom:20px;right:15px;z-index:9999;background:#FFD700;color:#000;width:56px;height:56px;border-radius:50%;border:2px solid #fff;display:none;align-items:center;justify-content:center;font-size:24px}</style>
-<button class="fab-mini" id="fabMini">⬇️</button>
-<script>let dp=null;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e;document.getElementById('fabMini').style.display='flex'});document.getElementById('fabMini').onclick=()=>{dp.prompt()};if('serviceWorker' in navigator)navigator.serviceWorker.register('../sw.js')</script>
-  <!-- BOTÃO FLUTUANTE DOURADO - INSTALAÇÃO DIRETA -->
-<link rel="manifest" href="./manifest.json">
-<style>
-.fab-mini{position:fixed;bottom:20px;right:15px;z-index:99999;background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;width:60px;height:60px;border-radius:50%;border:2px solid #fff;display:none;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 12px rgba(0,0,0,.7);cursor:pointer;animation:pulseFab 2s infinite}
-@keyframes pulseFab{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
-</style>
+
 <button class="fab-mini" id="fabMini" title="Instalar">⬇️</button>
+<style>#btnChamarPortal{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);z-index:999;background:#111;border:2px solid #FFD700;border-radius:24px;padding:8px 14px;display:flex;align-items:center;gap:10px}#btnChamarPortal b{color:#fff;font-size:11px}#btnChamarPortal .abrir{background:#FFD700;color:#000;padding:6px 14px;border-radius:20px;font-weight:900;font-size:11px;text-decoration:none}#btnChamarPortal .fechar{color:#666;cursor:pointer}</style>
+<div id="btnChamarPortal"><div><b>🔴 PORTAL DO POVO</b></div><a class="abrir" href="/">ABRIR</a><span class="fechar" onclick="this.parentElement.style.display='none'">✕</span></div>
 <script>
 let dpMini=null;
 window.addEventListener('beforeinstallprompt', e=>{e.preventDefault();dpMini=e;document.getElementById('fabMini').style.display='flex';});
-document.getElementById('fabMini').addEventListener('click', async()=>{ if(!dpMini) return; dpMini.prompt(); const o=await dpMini.userChoice; if(o.outcome==='accepted') document.getElementById('fabMini').style.display='none'; dpMini=null; });
-if('serviceWorker' in navigator){ navigator.serviceWorker.register('../sw.js'); }
+document.getElementById('fabMini').addEventListener('click', async()=>{ if(!dpMini) { if(appParaInstalar) dpMini=appParaInstalar; else return; } dpMini.prompt(); const o=await dpMini.userChoice; if(o.outcome==='accepted') document.getElementById('fabMini').style.display='none'; dpMini=null; });
 </script>
 </body>
 </html>
