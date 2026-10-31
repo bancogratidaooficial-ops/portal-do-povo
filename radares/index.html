@@ -1,104 +1,156 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263470788888608" crossorigin="anonymous"></script>
-<title>BANCO GRATIDÃO - Portal do Povo - Radares</title>
+<title>🗺️ Radares Mapa Curitiba e Região - 28 Radares no Mapa - BR-376</title>
+<meta name="description" content="Mapa radares Curitiba e região 28 radares no mapa: 4 novos BR-376 SJP PUC e Avipec 70km/h, 14 Curitiba Linha Verde, Pinhais, Araucária, Colombo. Busca rua, mapa interativo Leaflet.">
+<link rel="canonical" href="https://bancogratidao.com.br/radares-mapa/">
+<meta name="theme-color" content="#FFD700">
 <link rel="manifest" href="./manifest.json">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <style>
-body{margin:0;font-family:Arial;background:#000;color:#fff}
-.header{background:#ffcc00;color:#000;padding:18px;text-align:center;font-weight:900;font-size:24px}
-.sub{font-size:11px;font-weight:400}
-.topbtn{display:flex;gap:6px;padding:10px;background:#111;overflow:auto}
-.topbtn a{white-space:nowrap;background:#222;color:#ffcc00;padding:9px 14px;border-radius:20px;text-decoration:none;font-weight:bold;font-size:13px;border:1px solid #ffcc00}
-.topbtn a.ativo{background:#ffcc00;color:#000}
-#map{height:350px;width:100%}
-.cidade{background:#ffcc00;color:#000;padding:10px 15px;font-weight:900;font-size:18px;margin:20px 0 0 0;border-radius:8px 8px 0 0}
-.card{background:#111;margin:0 0 8px 0;padding:12px;border-left:5px solid #ffcc00}
-.card b{color:#fff;font-size:14px}
-.badge{font-size:10px;padding:2px 6px;border-radius:3px;color:#fff;font-weight:bold}
+*{box-sizing:border-box;font-family:system-ui}body{margin:0;background:#050505;color:#fff;padding-bottom:90px;padding-top:105px}
+.header-fixed{position:fixed;top:0;left:0;right:0;z-index:999;background:#000;border-bottom:3px solid #FFD700;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.tag{font-size:9px;font-weight:900;background:#FFD700;color:#000;padding:5px 10px;border-radius:20px}
+.conteudo-editor{background:#111;border:1px solid #FFD700;border-radius:12px;padding:12px;margin:10px}
+.conteudo-editor h2{font-size:13px;color:#FFD700;margin:0 0 6px}
+.conteudo-editor p{font-size:11px;line-height:16px;color:#ccc;margin:0 0 6px}
+.alert{background:#1a1500;border:1px solid #FFD700;border-radius:12px;padding:12px;margin:10px;font-size:11px;color:#ffeeaa}
+.ad-box{background:#0a0a0a;border:1px dashed #FFD700;border-radius:12px;padding:10px;text-align:center;margin:12px 10px}
+.sub{font-size:10px;color:#aaa}
+.topbtn{display:flex;gap:6px;padding:10px;background:#111;overflow:auto;position:sticky;top:0;z-index:10;border-radius:12px;margin:10px;border:1px solid #222}
+.topbtn a{white-space:nowrap;background:#222;color:#FFD700;padding:9px 14px;border-radius:20px;text-decoration:none;font-weight:900;font-size:12px;border:1px solid #333}
+.topbtn a.ativo{background:#FFD700;color:#000;border-color:#FFD700}
+#map{height:380px;width:calc(100% - 20px);margin:10px;border-radius:14px;border:2px solid #FFD700}
+.cidade{background:#FFD700;color:#000;padding:10px 15px;font-weight:900;font-size:14px;margin:20px 10px 0 10px;border-radius:12px 12px 0 0}
+.card{background:#111;margin:0 10px 8px 10px;padding:12px;border-left:5px solid #FFD700;border-radius:0 0 10px 10px}
+.card b{color:#fff;font-size:13px}
+.badge{font-size:9px;padding:3px 8px;border-radius:4px;color:#fff;font-weight:900}
 .novo{background:#ff0000} .fixo{background:#444}
-.search{margin:10px;width:calc(100% - 24px);padding:12px;border-radius:8px;border:none}
+.search{margin:10px;width:calc(100% - 20px);padding:14px;border-radius:12px;border:1px solid #333;background:#111;color:#fff;font-size:14px}
+.footer{max-width:1100px;margin:20px auto;text-align:center;border-top:2px solid #FFD700;padding:14px}
+.footer a{color:#FFD700;text-decoration:none;font-size:11px;margin:0 6px;font-weight:800}
+.fab-mini{position:fixed;bottom:20px;right:15px;z-index:99999;background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;width:60px;height:60px;border-radius:50%;border:2px solid #fff;display:none;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 12px rgba(0,0,0,.7);cursor:pointer}
 </style>
 </head>
 <body>
-<div class="header">BANCO GRATIDÃO<div class="sub">PORTAL DO POVO - RADARES CURITIBA E REGIÃO</div></div>
+
+<div class="header-fixed">
+<div><div style="font-weight:900;color:#FFD700;font-size:14px">🗺️ BANCO GRATIDÃO - RADARES MAPA</div><div class="sub">Portal do Povo - Radares Curitiba e Região no Mapa - 28 radares</div></div>
+<div style="display:flex;gap:6px"><span class="tag">28 NO MAPA</span><a href="/" style="background:#222;color:#fff;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:900;text-decoration:none">✕ FECHAR</a></div>
+</div>
+
+<div class="conteudo-editor">
+<h2>Mapa Radares Curitiba e Região 28 Radares no Mapa Interativo - 4 Novos BR-376</h2>
+<p>Quer ver radares no mapa? Mapa de radares Curitiba e região com 28 radares: 4 novos hoje BR-376 São José dos Pinhais PUC km 14.980 e 15.101 e Avipec km 11.828 e 11.811 limite 70 km/h, 14 em Curitiba Linha Verde BR-116, Centro 40 km/h, e ainda Pinhais Contorno Leste, Piraquara, Araucária, Fazenda Rio Grande, Colombo.</p>
+<p>Como usar: digite rua no buscar ex: Linha Verde, BR-376, toque nos botões CURITIBA, SÃO JOSÉ, PINHAIS, ARAUCÁRIA, COLOMBO pra filtrar, veja no mapa interativo com marcador. Salve: bancogratidao.com.br/radares-mapa/ - Atualizado 15/10/2026.</p>
+</div>
+
+<div class="alert">🗺️ DICA MAPA: 4 RADARES NOVOS BR-376 SJP NO MAPA COM MARCADOR VERMELHO. Use busca pra achar rua rápido. Toque nos marcadores no mapa pra ver velocidade.</div>
+
+<div class="ad-box"><small>PUBLICIDADE - TOPO</small>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2263470788888608" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
 <div class="topbtn">
-<a href="#curitiba" class="ativo">CURITIBA</a>
-<a href="#sjp">SÃO JOSÉ</a>
-<a href="#pinhais">PINHAIS</a>
-<a href="#araucaria">ARAUCÁRIA</a>
-<a href="#colombo">COLOMBO</a>
+<a href="#curitiba" class="ativo">📍 CURITIBA 14</a>
+<a href="#sjp">🚨 SÃO JOSÉ 6</a>
+<a href="#pinhais">PINHAIS 3</a>
+<a href="#araucaria">ARAUCÁRIA 3</a>
+<a href="#colombo">COLOMBO 2</a>
 </div>
 
-<input id="busca" class="search" placeholder="🔍 Buscar rua... ex: Linha Verde, BR-376" onkeyup="filtrar()">
+<input id="busca" class="search" placeholder="🔍 Buscar rua no mapa... ex: Linha Verde, BR-376, Rui Barbosa" onkeyup="filtrar()">
 <div id="map"></div>
 
-<div class="cidade" id="curitiba">📍 CURITIBA - 14 RADARES</div>
-<div class="card"><span class="badge novo">NOVO 30/09</span> <b>Rua Padre Agostinho x Visconde de Nácar - Centro - 40 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Victor Ferreira do Amaral, 1000 - Tarumã - 60 km/h - Linha Verde</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Victor Ferreira do Amaral, 1980 - Tarumã - 60 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Linha Verde BR-116 km 101 - Atuba - 70 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Linha Verde BR-116 km 107 - Uberaba - 70 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Comendador Franco (das Torres), 2500 - Uberaba - 60 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Marechal Floriano, 4800 - Hauer - 60 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Winston Churchill, 1800 - Capão Raso - 60 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. República Argentina, 3400 - Portão - 60 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Sete de Setembro, 5400 - Batel - 50 km/h Lombada</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Iguaçu, 1000 - Rebouças - 60 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Manoel Ribas, 3000 - Mercês - 60 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Toaldo Túlio, 1500 - São Braz - 60 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>BR-277 km 2 - Jardim Botânico - 70 km/h</b></div>
+<div class="ad-box"><small>PUBLICIDADE - MEIO</small>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2263470788888608" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
-<div class="cidade" id="sjp">📍 SÃO JOSÉ DOS PINHAIS - 6 RADARES (4 NOVOS HOJE)</div>
-<div class="card"><span class="badge novo">NOVO HOJE 14/10</span> <b>BR-376 km 14.980 - Antiga PUC (Bairro-Centro) - 70 km/h - 3 faixas</b></div>
-<div class="card"><span class="badge novo">NOVO HOJE 14/10</span> <b>BR-376 km 15.101 - Antiga PUC (Centro-Bairro) - 70 km/h - 3 faixas</b></div>
-<div class="card"><span class="badge novo">NOVO HOJE 14/10</span> <b>BR-376 km 11.828 - Avipec (Bairro-Centro) - 70 km/h - 2 faixas</b></div>
-<div class="card"><span class="badge novo">NOVO HOJE 14/10</span> <b>BR-376 km 11.811 - Avipec (Centro-Bairro) - 70 km/h - 2 faixas</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Rui Barbosa, 8000 - Centro - 60 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>BR-376 Guatupê - 60 km/h</b></div>
+<div class="cidade" id="curitiba">📍 CURITIBA - 14 RADARES NO MAPA</div>
+<div class="card"><span class="badge novo">NOVO 30/09</span> <b>Rua Padre Agostinho x Visconde de Nácar - Centro - 40 km/h - Curitiba</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Victor Ferreira do Amaral, 1000 - Tarumã - 60 km/h - Linha Verde - Curitiba</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Victor Ferreira do Amaral, 1980 - Tarumã - 60 km/h - Curitiba</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Linha Verde BR-116 km 101 - Atuba - 70 km/h - Curitiba</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Linha Verde BR-116 km 107 - Uberaba - 70 km/h - Curitiba</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Comendador Franco (das Torres), 2500 - Uberaba - 60 km/h - Curitiba</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Marechal Floriano, 4800 - Hauer - 60 km/h - Curitiba</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Winston Churchill, 1800 - Capão Raso - 60 km/h - Curitiba</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. República Argentina, 3400 - Portão - 60 km/h - Curitiba</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Sete de Setembro, 5400 - Batel - 50 km/h Lombada - Curitiba</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Iguaçu, 1000 - Rebouças - 60 km/h - Curitiba</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Manoel Ribas, 3000 - Mercês - 60 km/h - Curitiba</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Toaldo Túlio, 1500 - São Braz - 60 km/h - Curitiba</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>BR-277 km 2 - Jardim Botânico - 70 km/h - Curitiba</b></div>
+
+<div class="cidade" id="sjp">📍 SÃO JOSÉ DOS PINHAIS - 6 RADARES - 4 NOVOS HOJE NO MAPA</div>
+<div class="card" style="border-left-color:red;background:#1a0f00"><span class="badge novo">NOVO HOJE 14/10</span> <b>BR-376 km 14.980 - Antiga PUC (Bairro-Centro) - 70 km/h - 3 faixas - SJP - NO MAPA</b></div>
+<div class="card" style="border-left-color:red;background:#1a0f00"><span class="badge novo">NOVO HOJE 14/10</span> <b>BR-376 km 15.101 - Antiga PUC (Centro-Bairro) - 70 km/h - 3 faixas - SJP - NO MAPA</b></div>
+<div class="card" style="border-left-color:red;background:#1a0f00"><span class="badge novo">NOVO HOJE 14/10</span> <b>BR-376 km 11.828 - Avipec (Bairro-Centro) - 70 km/h - 2 faixas - SJP - NO MAPA</b></div>
+<div class="card" style="border-left-color:red;background:#1a0f00"><span class="badge novo">NOVO HOJE 14/10</span> <b>BR-376 km 11.811 - Avipec (Centro-Bairro) - 70 km/h - 2 faixas - SJP - NO MAPA</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Rui Barbosa, 8000 - Centro - 60 km/h - SJP</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>BR-376 Guatupê - 60 km/h - SJP</b></div>
 
 <div class="cidade" id="pinhais">📍 PINHAIS / PIRAQUARA / SÃO JOSÉ - 3 RADARES</div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Contorno Leste BR-116 - Pinhais - 60 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Iraí, 500 - Pinhais - 50 km/h Lombada</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Rod. Dep. João Leopoldo Jacomel - Piraquara - 60 km/h</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Contorno Leste BR-116 - Pinhais - 60 km/h - Pinhais</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Iraí, 500 - Pinhais - 50 km/h Lombada - Pinhais</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Rod. Dep. João Leopoldo Jacomel - Piraquara - 60 km/h - Piraquara</b></div>
 
 <div class="cidade" id="araucaria">📍 ARAUCÁRIA / FAZENDA RIO GRANDE - 3 RADARES</div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Juscelino Kubitschek - Araucária - 60 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>BR-476 Contorno Sul - Araucária - 60 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Brasil - Fazenda Rio Grande - 60 km/h</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Juscelino Kubitschek - Araucária - 60 km/h - Araucária</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>BR-476 Contorno Sul - Araucária - 60 km/h - Araucária</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. Brasil - Fazenda Rio Grande - 60 km/h - Fazenda Rio Grande</b></div>
 
 <div class="cidade" id="colombo">📍 COLOMBO / ALMIRANTE TAMANDARÉ - 2 RADARES</div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Rod. da Uva, 1500 - Colombo - 60 km/h</b></div>
-<div class="card"><span class="badge fixo">FIXO</span> <b>Av. São Gabriel - Almirante Tamandaré - 50 km/h Lombada</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Rod. da Uva, 1500 - Colombo - 60 km/h - Colombo</b></div>
+<div class="card"><span class="badge fixo">FIXO</span> <b>Av. São Gabriel - Almirante Tamandaré - 50 km/h Lombada - Tamandaré</b></div>
 
-<div style="padding:20px;text-align:center">
-<a href="https://wa.me/?text=Radares%20Curitiba%20e%20Regiao%20atualizados%20https://bancogratidaooficial-ops.github.io/Portal-do-povo/" style="background:#25D366;color:#fff;padding:15px;border-radius:10px;text-decoration:none;font-weight:bold;display:block">📲 COMPARTILHAR NO WHATSAPP</a>
+<div style="padding:15px;text-align:center">
+<a href="https://wa.me/?text=Mapa%20Radares%20Curitiba%20e%20Regiao%20no%20mapa%20https://bancogratidao.com.br/radares-mapa/" style="background:#25D366;color:#fff;padding:14px;border-radius:20px;text-decoration:none;font-weight:900;display:inline-block">📲 COMPARTILHAR MAPA NO WHATSAPP</a>
 </div>
+
+<div style="text-align:center;padding:10px">
+<a href="/" style="display:inline-block;background:#111;color:#FFD700;border:1px solid #FFD700;padding:12px 20px;border-radius:12px;font-weight:900;text-decoration:none">⬅️ VOLTAR AO PORTAL DO POVO</a>
+</div>
+
+<div class="ad-box"><small>PUBLICIDADE - RODAPÉ</small>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2263470788888608" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<footer class="footer">
+<a href="/">🏠 PORTAL</a>
+<a href="/radares/">🚨 RADARES LISTA</a>
+<a href="/privacidade/">🔒 PRIVACIDADE</a>
+<a href="/contato/">📞 CONTATO</a>
+<p style="color:#888;font-size:10px;margin-top:8px">Mapa Radares Curitiba e Região - 28 radares no mapa interativo - BR-376 SJP novos - Atualizado 15/10/2026 - Banco Gratidão</p>
+</footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 var map = L.map('map').setView([-25.50, -49.20], 11);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-L.marker([-25.537,-49.204]).addTo(map).bindPopup("BR-376 PUC 70km/h NOVO");
-L.marker([-25.559,-49.190]).addTo(map).bindPopup("BR-376 Avipec 70km/h NOVO");
-L.marker([-25.436,-49.235]).addTo(map).bindPopup("Linha Verde 70km/h");
-L.marker([-25.428,-49.288]).addTo(map).bindPopup("Centro 40km/h");
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap'}).addTo(map);
+L.marker([-25.537,-49.204]).addTo(map).bindPopup("<b>BR-376 PUC km 14.980</b><br>70 km/h NOVO HOJE - 3 faixas");
+L.marker([-25.535,-49.202]).addTo(map).bindPopup("<b>BR-376 PUC km 15.101</b><br>70 km/h NOVO HOJE - 3 faixas");
+L.marker([-25.559,-49.190]).addTo(map).bindPopup("<b>BR-376 Avipec km 11.828</b><br>70 km/h NOVO HOJE - 2 faixas");
+L.marker([-25.557,-49.188]).addTo(map).bindPopup("<b>BR-376 Avipec km 11.811</b><br>70 km/h NOVO HOJE - 2 faixas");
+L.marker([-25.436,-49.235]).addTo(map).bindPopup("Linha Verde BR-116 - 70km/h - Atuba");
+L.marker([-25.428,-49.288]).addTo(map).bindPopup("Centro - Padre Agostinho - 40km/h NOVO");
+L.marker([-25.479,-49.273]).addTo(map).bindPopup("Marechal Floriano - Hauer - 60km/h");
 function filtrar(){let t=document.getElementById('busca').value.toLowerCase();document.querySelectorAll('.card').forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(t)?'':'none'})}
 </script>
-<style>
-.fab-mini{position:fixed;bottom:20px;right:15px;z-index:99999;background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;width:60px;height:60px;border-radius:50%;border:2px solid #fff;display:none;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 12px rgba(0,0,0,.7);cursor:pointer;animation:pulseFab 2s infinite}
-@keyframes pulseFab{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
-</style>
+
 <button class="fab-mini" id="fabMini" title="Instalar">⬇️</button>
+<style>#btnChamarPortal{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);z-index:999;background:#111;border:2px solid #FFD700;border-radius:24px;padding:8px 14px;display:flex;align-items:center;gap:10px}#btnChamarPortal b{color:#fff;font-size:11px}#btnChamarPortal .abrir{background:#FFD700;color:#000;padding:6px 14px;border-radius:20px;font-weight:900;font-size:11px;text-decoration:none}#btnChamarPortal .fechar{color:#666;cursor:pointer}</style>
+<div id="btnChamarPortal"><div><b>🔴 PORTAL DO POVO</b></div><a class="abrir" href="/">ABRIR</a><span class="fechar" onclick="this.parentElement.style.display='none'">✕</span></div>
 <script>
 let dpMini=null;
 window.addEventListener('beforeinstallprompt', e=>{e.preventDefault();dpMini=e;document.getElementById('fabMini').style.display='flex';});
 document.getElementById('fabMini').addEventListener('click', async()=>{ if(!dpMini) return; dpMini.prompt(); const o=await dpMini.userChoice; if(o.outcome==='accepted') document.getElementById('fabMini').style.display='none'; dpMini=null; });
-if('serviceWorker' in navigator){ navigator.serviceWorker.register('../sw.js'); }
+if('serviceWorker' in navigator){ navigator.serviceWorker.register('./sw.js'); }
 </script>
 </body>
 </html>
