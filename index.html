@@ -17,18 +17,20 @@
 .box summary::-webkit-details-marker{display:none}
 .box .conteudo{padding:0 14px 14px;font-size:13px;line-height:1.5;color:#aaa}
 .box .conteudo p{margin:0 0 10px}
-.cat{background:#FFD700;color:#000;font-weight:900;padding:10px 14px;border-radius:8px;margin:14px 10px;font-size:13px}
+.cat{background:#FFD700;color:#000;font-weight:900;padding:10px 14px;border-radius:8px;margin:14px 10px;font-size:13px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.cat::-webkit-details-marker{display:none}
 .grid{max-width:980px;margin:0 auto;padding:0 10px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 @media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr)}}
 .card{background:#151515;border:2px solid #333;border-radius:14px;overflow:hidden;text-decoration:none;color:#fff;display:block}
 .card img{width:100%;height:100px;object-fit:cover;display:block}
 .card b{display:block;padding:8px 10px;font-size:11px;text-transform:uppercase}
 .card span{padding:0 10px 8px;display:block;font-size:9px;color:#aaa}
+.detalhe-amarelo{margin:14px 10px}
+.detalhe-amarelo[open] .cat span{transform:rotate(180deg)}
 .nav-fixa{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:12px;background:#111;border-top:4px solid #FFD700;border-bottom:4px solid #FFD700;margin:12px 0}
 .nav-fixa a{background:#222;border:2px solid #FFD700;color:#FFD700;padding:8px 14px;border-radius:20px;font-weight:900;font-size:11px;text-decoration:none}
 footer{background:#111;padding:16px;text-align:center;border-top:4px solid #FFD700}
 footer a{color:#FFD700;border:1px solid #333;background:#222;padding:6px 12px;border-radius:20px;margin:4px;display:inline-block;text-decoration:none;font-size:10px}
-.badge{position:absolute;background:#FFD700;color:#000;font-size:8px;font-weight:900;padding:3px 6px;border-radius:10px;margin:6px}
 </style>
 </head>
 <body>
@@ -54,8 +56,9 @@ footer a{color:#FFD700;border:1px solid #333;background:#222;padding:6px 12px;bo
 </div>
 </details>
 
-<div class="cat">⚙️ SISTEMA</div>
-<div class="grid">
+<details class="detalhe-amarelo">
+<summary class="cat">⚙️ SISTEMA - PRIVACIDADE CONTATOS SOBRE AJUDA TERMOS <span>▼</span></summary>
+<div class="grid" style="margin-top:10px">
 <a href="privacidade/" class="card"><img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400"><b>🔒 PRIVACIDADE</b><span>privacidade</span></a>
 <a href="contato/" class="card"><img src="https://images.unsplash.com/photo-1590650046871-92c887180a5f?w=400"><b>📞 CONTATO</b><span>contato</span></a>
 <a href="sobre/" class="card"><img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400"><b>ℹ️ SOBRE</b><span>sobre</span></a>
@@ -63,8 +66,9 @@ footer a{color:#FFD700;border:1px solid #333;background:#222;padding:6px 12px;bo
 <a href="termos/" class="card"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400"><b>📄 TERMOS</b><span>termos</span></a>
 <a href="sistema/" class="card"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400"><b>⚙️ SISTEMA</b><span>sistema</span></a>
 </div>
+</details>
 
-<div class="cat">🌙 ESTABELECIMENTOS 24H</div>
+<div class="cat" style="cursor:default">🌙 ESTABELECIMENTOS 24H</div>
 <div class="grid">
 <a href="chaveiro-24h/" class="card"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400"><b>🔑 CHAVEIRO 24H</b><span>chaveiro-24h</span></a>
 <a href="eletricista-24h/" class="card"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400"><b>⚡ ELETRICISTA 24H</b><span>eletricista-24h</span></a>
@@ -76,14 +80,14 @@ footer a{color:#FFD700;border:1px solid #333;background:#222;padding:6px 12px;bo
 <a href="oficinas-24h/" class="card"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=400"><b>🔧 OFICINAS 24H</b><span>oficinas-24h</span></a>
 </div>
 
-<div class="cat">⚰️ FUNERÁRIAS / CEMITÉRIOS</div>
+<div class="cat" style="cursor:default">⚰️ FUNERÁRIAS / CEMITÉRIOS</div>
 <div class="grid">
 <a href="funerarias/" class="card"><img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=400"><b>⚰️ FUNERÁRIAS</b><span>funerarias</span></a>
 <a href="cemiterios/" class="card"><img src="https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=400"><b>🪦 CEMITÉRIOS</b><span>cemiterios</span></a>
 <a href="enterramento-funerarias/" class="card"><img src="https://images.unsplash.com/photo-1490735891913-40897cdaafd1?w=400"><b>🕯️ ENTERRAMENTO</b><span>enterramento-funerarias</span></a>
 </div>
 
-<div class="cat">🏛️ PÚBLICOS E SAÚDE</div>
+<div class="cat" style="cursor:default">🏛️ PÚBLICOS E SAÚDE</div>
 <div class="grid">
 <a href="orgaos-publicos/" class="card"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400"><b>🏛️ ÓRGÃOS PÚBLICOS</b><span>orgaos-publicos</span></a>
 <a href="hospitais/" class="card"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400"><b>🏥 HOSPITAIS</b><span>hospitais</span></a>
@@ -96,7 +100,7 @@ footer a{color:#FFD700;border:1px solid #333;background:#222;padding:6px 12px;bo
 <a href="animais-ong-hospitais/" class="card"><img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400"><b>🐾 ANIMAIS ONG</b><span>animais-ong-hospitais</span></a>
 </div>
 
-<div class="cat">📦 ORGANIZAÇÃO</div>
+<div class="cat" style="cursor:default">📦 ORGANIZAÇÃO</div>
 <div class="grid">
 <a href="backup/" class="card"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400"><b>💾 BACKUP</b><span>backup</span></a>
 <a href="bancos/" class="card"><img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=400"><b>🏦 BANCOS</b><span>bancos - códigos 077 260 336 104</span></a>
@@ -110,7 +114,7 @@ footer a{color:#FFD700;border:1px solid #333;background:#222;padding:6px 12px;bo
 <a href="classificados/" class="card"><img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=400"><b>📋 CLASSIFICADOS</b><span>classificados</span></a>
 </div>
 
-<div class="cat">🚌 TRANSPORTE E CIDADE</div>
+<div class="cat" style="cursor:default">🚌 TRANSPORTE E CIDADE</div>
 <div class="grid">
 <a href="onibus/" class="card"><img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400"><b>🚌 ÔNIBUS</b><span>onibus</span></a>
 <a href="mapas/" class="card"><img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=400"><b>🗺️ MAPAS</b><span>mapas</span></a>
@@ -119,14 +123,14 @@ footer a{color:#FFD700;border:1px solid #333;background:#222;padding:6px 12px;bo
 <a href="cameras/" class="card"><img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400"><b>📹 CAMERAS</b><span>cameras</span></a>
 </div>
 
-<div class="cat">📚 CURSOS, ENEM</div>
+<div class="cat" style="cursor:default">📚 CURSOS, ENEM</div>
 <div class="grid">
 <a href="cursos/" class="card"><img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?w=400"><b>📚 CURSOS</b><span>cursos</span></a>
 <a href="enem/" class="card"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400"><b>📝 ENEM</b><span>enem</span></a>
 <a href="viagens-no-tempo/" class="card"><img src="https://images.unsplash.com/photo-1462331940025-496dfbf75674?w=400"><b>⏰ VIAGENS NO TEMPO</b><span>viagens-no-tempo</span></a>
 </div>
 
-<div class="cat">🎬 ENTRETENIMENTO - SÓ CINE GRATIFLIX</div>
+<div class="cat" style="cursor:default">🎬 ENTRETENIMENTO - SÓ CINE GRATIFLIX</div>
 <div class="grid">
 <a href="Cine-gratiflix/" class="card" style="border-color:#c62828"><img src="https://image.tmdb.org/t/p/w500/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg"><b>🎬 CINE GRATIFLIX</b><span>89 filmes grátis - oficial</span></a>
 <a href="musicas/" class="card"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400"><b>🎵 MÚSICAS</b><span>musicas</span></a>
