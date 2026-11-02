@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ADSENSE AUTOMÁTICO - ÚNICO -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263470788888608" crossorigin="anonymous"></script>
 <title>🎬 Cine GratiFlix - 114 Filmes Grátis - Portal do Povo</title>
 <meta name="description" content="Cine GratiFlix: 114 filmes grátis online no Portal do Povo. Dragon Ball Viagem de Pan para o Passado, Portal do Povo, lançamentos, ação, clássicos.">
@@ -17,10 +18,6 @@ header{position:sticky;top:0;z-index:99;background:#000;border-bottom:3px solid 
 .conteudo-editor h2{font-size:13px;color:#FFD700;margin:0 0 6px}
 .conteudo-editor p{font-size:11px;line-height:16px;color:#ccc;margin:0 0 6px}
 .alert{background:#1a1500;border:1px solid #FFD700;border-radius:12px;padding:12px;margin:10px;font-size:11px;color:#ffeeaa}
-.ad-box{background:#0a0a0a;border:1px dashed #FFD700;border-radius:12px;padding:10px;text-align:center;margin:12px 10px}
-.filters{position:sticky;top:58px;z-index:98;background:#000;padding:10px;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;border-bottom:1px solid #222}
-.filters button{background:#1a1a1a;border:1px solid #333;color:#aaa;padding:7px 14px;border-radius:20px;font-size:11px;font-weight:800;cursor:pointer}
-.filters button.active{background:#FFD700;color:#000;border-color:#FFD700}
 .row{display:flex;flex-wrap:wrap;gap:12px;padding:16px;justify-content:center}
 .card{width:150px;cursor:pointer;transition:.2s}.card:hover{transform:scale(1.05)}
 .card img{width:150px;height:225px;object-fit:cover;border-radius:12px;background:#111;border:1px solid #222;display:block}
@@ -41,31 +38,12 @@ header{position:sticky;top:0;z-index:99;background:#000;border-bottom:3px solid 
 
 <div class="conteudo-editor">
 <h2>Cine GratiFlix - Pasta Única Sem Vídeos Duplicados</h2>
-<p>Todos os filmes do Portal do Povo reunidos em uma única pasta oficial cine-gratiflix para evitar conteúdo duplicado no Google. São 114 filmes verificados incluindo Dragon Ball - Viagem de Pan para o Passado, Portal do Povo Modão, lançamentos, ação e clássicos domínio público como Batman 1949.</p>
-<p>Filmes incorporados do YouTube nocookie e Archive.org de forma legal. Toque no pôster para assistir na TV ou celular. Salve nos favoritos: bancogratidao.com.br/cine-gratiflix/</p>
+<p>Todos os filmes do Portal do Povo reunidos em uma única pasta oficial cine-gratiflix para evitar conteúdo duplicado no Google. São 114 filmes verificados incluindo Dragon Ball - Viagem de Pan para o Passado.</p>
 </div>
 
-<div class="filters">
-<button class="active" onclick="filtrar('todos',this)">TODOS (114)</button>
-<button onclick="filtrar('povo',this)">PORTAL DO POVO</button>
-<button onclick="filtrar('lanc',this)">LANÇAMENTO</button>
-<button onclick="filtrar('acao',this)">AÇÃO</button>
-<button onclick="filtrar('shorts',this)">SHORTS</button>
-</div>
-
-<div class="alert">✅ 114 FILMES ÚNICOS VERIFICADOS - Sem duplicado - Inclui Dragon Ball Pan</div>
-
-<div class="ad-box"><small>PUBLICIDADE</small>
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2263470788888608" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+<div class="alert">✅ 114 FILMES ÚNICOS VERIFICADOS - Inclui Dragon Ball Pan</div>
 
 <div class="row" id="lista"></div>
-
-<div class="ad-box"><small>PUBLICIDADE - RODAPÉ</small>
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2263470788888608" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 
 <div id="player">
   <div class="box-video">
@@ -82,7 +60,7 @@ header{position:sticky;top:0;z-index:99;background:#000;border-bottom:3px solid 
 <a href="/">🏠 PORTAL</a>
 <a href="/privacidade/">🔒 PRIVACIDADE</a>
 <a href="/contato/">📞 CONTATO</a>
-<p style="color:#888;font-size:10px;margin-top:8px">114 filmes sem duplicidade - YouTube nocookie + Archive.org domínio público - Pasta única oficial</p>
+<p style="color:#888;font-size:10px;margin-top:8px">114 filmes - YouTube nocookie + Archive.org - Pasta única oficial</p>
 </footer>
 
 <script>
@@ -215,11 +193,11 @@ const filmes = [
 ];
 
 const lista=document.getElementById('lista');
-document.getElementById('contador').textContent=filmes.length+' FILMES ÚNICOS';
+document.getElementById('contador').textContent=filmes.length+' FILMES';
 
-function render(cat='todos'){
+function render(){
  lista.innerHTML='';
- filmes.filter(f=>cat==='todos'||f.c.includes(cat)).forEach((f,i)=>{
+ filmes.forEach((f,i)=>{
   let div=document.createElement('div');
   div.className='card';
   div.innerHTML=`<img src="${f.i}" loading="lazy"><p>${f.t}</p>`;
@@ -228,12 +206,6 @@ function render(cat='todos'){
  });
 }
 render();
-
-function filtrar(cat, el){
- document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
- if(el) el.classList.add('active');
- render(cat);
-}
 
 function abrir(i){
   let f=filmes[i];
