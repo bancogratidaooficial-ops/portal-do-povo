@@ -17,21 +17,33 @@ body{background:#000;color:#fff;font-family:Arial,sans-serif;padding:12px}
 .alerta p{font-size:11px;color:#ccc;line-height:1.4}
 .grid{display:grid;grid-template-columns:1fr;gap:10px}
 @media(min-width:600px){.grid{grid-template-columns:1fr 1fr}}
-.card{background:#151515;border:1px solid #2a2a2a;border-radius:14px;overflow:hidden}
+.card{background:#151515;border:1px solid #2a2a2a;border-radius:14px;overflow:hidden;cursor:pointer;position:relative}
 .card:hover{border-color:#55ff55;transform:scale(1.02)}
-.card iframe{width:100%;height:190px;border:0}
+.card .thumb{width:100%;height:190px;object-fit:cover;display:block;background:#000}
+.card .play-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-80%);width:56px;height:40px;background:#ff0000;border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,.6)}
+.card .play-icon:after{content:'▶';color:#fff;font-size:20px;margin-left:3px}
 .card .info{padding:10px 12px}
 .card .num{color:#55ff55;font-size:10px;font-weight:800}
 .card .title{color:#eee;font-size:12px;margin-top:3px;font-weight:700}
 .card .desc{color:#888;font-size:10px;margin-top:4px;line-height:1.3}
 a.voltar{display:block;text-align:center;background:#222;color:#55ff55;padding:12px;border-radius:12px;text-decoration:none;font-weight:800;margin-top:16px;border:1px solid #333}
+
+/* PLAYER GRANDE DENTRO DO SITE - NÃO SAI PRO YOUTUBE */
+#player-overlay{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;display:none;flex-direction:column}
+#player-overlay.ativo{display:flex}
+#player-top{display:flex;justify-content:space-between;align-items:center;padding:12px;background:#111;border-bottom:1px solid #333}
+#player-top b{color:#55ff55;font-size:13px}
+#player-top button{background:#222;color:#fff;border:1px solid #444;padding:8px 14px;border-radius:20px;font-weight:800;font-size:12px;cursor:pointer;margin-left:6px}
+#player-top button.full{background:#55ff55;color:#000;border-color:#55ff55}
+#player-box{flex:1;display:flex;align-items:center;justify-content:center;padding:10px;background:#000}
+#player-box iframe{width:100%;max-width:900px;aspect-ratio:16/9;height:auto;border:0;border-radius:12px;background:#000}
 </style>
 </head>
 <body>
 <div class="header">
 <h1>📸 FOTOS & EVIDÊNCIAS</h1>
 <p>Será que viajantes do tempo já estão entre nós?<br>Fotos, vídeos e relatos analisados</p>
-<span class="badge">10 VÍDEOS • INVESTIGAÇÃO</span>
+<span class="badge">10 VÍDEOS • PLAYER DENTRO DO SITE</span>
 </div>
 
 <div class="alerta">
@@ -39,19 +51,63 @@ a.voltar{display:block;text-align:center;background:#222;color:#55ff55;padding:1
 <p><b style="color:#55ff55">ANÁLISE:</b> Todas as imagens abaixo circulam na internet como possíveis provas. Assista com olhar crítico. Algumas tem explicação, outras continuam sem resposta até hoje.</p>
 </div>
 
-<div class="grid">
-<div class="card"><iframe src="https://www.youtube.com/embed/13WdID6xzA4" allowfullscreen></iframe><div class="info"><div class="num">EVIDÊNCIA #01</div><div class="title">Foto / Evidência 01</div><div class="desc">Análise de foto antiga que parece mostrar objeto moderno</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/stxTVcwZ9DI" allowfullscreen></iframe><div class="info"><div class="num">EVIDÊNCIA #02</div><div class="title">Foto / Evidência 02</div><div class="desc">Relato investigado sobre viajante do tempo</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/uan2H8QElNg" allowfullscreen></iframe><div class="info"><div class="num">EVIDÊNCIA #03</div><div class="title">Foto / Evidência 03</div><div class="desc">Imagem viral que intriga até especialistas</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/UM2sDN8Aghg" allowfullscreen></iframe><div class="info"><div class="num">EVIDÊNCIA #04</div><div class="title">Foto / Evidência 04</div><div class="desc">Possível prova de tecnologia fora da época</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/LLf9AViLymA" allowfullscreen></iframe><div class="info"><div class="num">EVIDÊNCIA #05</div><div class="title">Foto / Evidência 05</div><div class="desc">Caso famoso de foto histórica com detalhe estranho</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/_btPRNpAgv8" allowfullscreen></iframe><div class="info"><div class="num">EVIDÊNCIA #06</div><div class="title">Foto / Evidência 06</div><div class="desc">Vídeo analisado quadro a quadro</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/t1PPrpSGlmc" allowfullscreen></iframe><div class="info"><div class="num">EVIDÊNCIA #07</div><div class="title">Foto / Evidência 07</div><div class="desc">Evidência que até hoje não tem explicação oficial</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/Wd0CxSA2FO0" allowfullscreen></iframe><div class="info"><div class="num">EVIDÊNCIA #08</div><div class="title">Foto / Evidência 08</div><div class="desc">Comparação de imagem antiga x tecnologia atual</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/5g-Ptt0ndWM" allowfullscreen></iframe><div class="info"><div class="num">EVIDÊNCIA #09</div><div class="title">Foto / Evidência 09</div><div class="desc">Caso investigado por pesquisadores independentes</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/a4Ku1Kr-ps0" allowfullscreen></iframe><div class="info"><div class="num">EVIDÊNCIA #10</div><div class="title">Foto / Evidência 10</div><div class="desc">Última evidência do arquivo - tire suas conclusões</div></div></div>
-</div>
+<div class="grid" id="grid"></div>
 
 <a href="../" class="voltar">⬅️ VOLTAR PARA VIAGENS NO TEMPO</a>
+
+<div id="player-overlay">
+<div id="player-top">
+<b id="player-titulo">EVIDÊNCIA</b>
+<div>
+<button class="full" onclick="telaCheia()">⛶ TELA CHEIA NO SITE</button>
+<button onclick="fecharPlayer()">✕ FECHAR</button>
+</div>
+</div>
+<div id="player-box"></div>
+</div>
+
+<script>
+const videos = [
+{ id:"13WdID6xzA4", t:"Foto / Evidência 01", d:"Análise de foto antiga que parece mostrar objeto moderno" },
+{ id:"stxTVcwZ9DI", t:"Foto / Evidência 02", d:"Relato investigado sobre viajante do tempo" },
+{ id:"uan2H8QElNg", t:"Foto / Evidência 03", d:"Imagem viral que intriga até especialistas" },
+{ id:"UM2sDN8Aghg", t:"Foto / Evidência 04", d:"Possível prova de tecnologia fora da época" },
+{ id:"LLf9AViLymA", t:"Foto / Evidência 05", d:"Caso famoso de foto histórica com detalhe estranho" },
+{ id:"_btPRNpAgv8", t:"Foto / Evidência 06", d:"Vídeo analisado quadro a quadro" },
+{ id:"t1PPrpSGlmc", t:"Foto / Evidência 07", d:"Evidência que até hoje não tem explicação oficial" },
+{ id:"Wd0CxSA2FO0", t:"Foto / Evidência 08", d:"Comparação de imagem antiga x tecnologia atual" },
+{ id:"5g-Ptt0ndWM", t:"Foto / Evidência 09", d:"Caso investigado por pesquisadores independentes" },
+{ id:"a4Ku1Kr-ps0", t:"Foto / Evidência 10", d:"Última evidência do arquivo - tire suas conclusões" }
+];
+const grid = document.getElementById('grid');
+videos.forEach((v,i)=>{
+  const el = document.createElement('div');
+  el.className='card';
+  el.innerHTML=`<img class="thumb" src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg" loading="lazy"><div class="play-icon"></div><div class="info"><div class="num">EVIDÊNCIA #${String(i+1).padStart(2,'0')}</div><div class="title">${v.t}</div><div class="desc">${v.d}</div></div>`;
+  el.onclick=()=>abrirPlayer(v.id,i+1);
+  grid.appendChild(el);
+});
+function abrirPlayer(id,num){
+  const overlay=document.getElementById('player-overlay');
+  const box=document.getElementById('player-box');
+  document.getElementById('player-titulo').innerText=`EVIDÊNCIA #${String(num).padStart(2,'0')} - Dentro do Banco Gratidão`;
+  box.innerHTML=`<iframe id="iframe-player" src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&modestbranding=1&rel=0&playsinline=1&fs=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+  overlay.classList.add('ativo');
+  document.body.style.overflow='hidden';
+}
+function fecharPlayer(){
+  document.getElementById('player-overlay').classList.remove('ativo');
+  document.getElementById('player-box').innerHTML='';
+  document.body.style.overflow='';
+}
+function telaCheia(){
+  const box=document.getElementById('player-box');
+  if(box.requestFullscreen) box.requestFullscreen();
+  else if(box.webkitRequestFullscreen) box.webkitRequestFullscreen();
+}
+document.getElementById('player-overlay').addEventListener('click',e=>{
+  if(e.target.id==='player-overlay' || e.target.id==='player-box') fecharPlayer();
+});
+</script>
 </body>
 </html>
