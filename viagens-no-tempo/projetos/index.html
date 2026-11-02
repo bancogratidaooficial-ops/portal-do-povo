@@ -13,39 +13,83 @@ body{background:#000;color:#fff;font-family:Arial,sans-serif;padding:12px}
 .header p{color:#aaa;font-size:12px;margin-top:6px;line-height:1.4}
 .badge{display:inline-block;background:#ff4444;color:#fff;font-weight:800;font-size:10px;padding:4px 10px;border-radius:20px;margin-top:8px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media(min-width:600px){.grid{grid-template-columns:1fr 1fr}}
-.card{background:#151515;border:1px solid #2a2a2a;border-radius:14px;overflow:hidden}
+.card{background:#151515;border:1px solid #2a2a2a;border-radius:14px;overflow:hidden;cursor:pointer;position:relative}
 .card:hover{border-color:#ff4444;transform:scale(1.02)}
-.card iframe{width:100%;height:160px;border:0}
+.card .thumb{width:100%;height:160px;object-fit:cover;display:block;background:#000}
+.card .play-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-75%);width:56px;height:40px;background:#ff0000;border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,.6)}
+.card .play-icon:after{content:'▶';color:#fff;font-size:20px;margin-left:3px}
 .card .info{padding:8px 10px}
 .card .num{color:#ff4444;font-size:10px;font-weight:800}
 .card .title{color:#eee;font-size:11px;margin-top:2px}
 .desc{background:#111;padding:10px;border-radius:10px;margin-bottom:12px;border-left:3px solid #ff4444;font-size:11px;color:#ccc;line-height:1.4}
 a.voltar{display:block;text-align:center;background:#222;color:#ff4444;padding:12px;border-radius:12px;text-decoration:none;font-weight:800;margin-top:16px;border:1px solid #333}
+
+/* PLAYER DENTRO DO SITE */
+#player-overlay{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;display:none;flex-direction:column}
+#player-overlay.ativo{display:flex}
+#player-top{display:flex;justify-content:space-between;align-items:center;padding:12px;background:#111;border-bottom:1px solid #333}
+#player-top b{color:#ff4444;font-size:13px}
+#player-top button{background:#222;color:#fff;border:1px solid #444;padding:8px 14px;border-radius:20px;font-weight:800;font-size:12px;cursor:pointer;margin-left:6px}
+#player-top button.full{background:#ff4444;border-color:#ff4444;color:#fff}
+#player-box{flex:1;display:flex;align-items:center;justify-content:center;padding:10px;background:#000}
+#player-box iframe{width:100%;max-width:900px;aspect-ratio:16/9;height:auto;border:0;border-radius:12px;background:#000}
 </style>
 </head>
 <body>
 <div class="header">
 <h1>🛸 PROJETOS SECRETOS</h1>
 <p>Experimentos que o governo esconde?<br>Filadélfia, Montauk, Pegasus e outros</p>
-<span class="badge">8 VÍDEOS • DOCUMENTOS CONFIDENCIAIS</span>
+<span class="badge">8 VÍDEOS • PLAYER DENTRO DO SITE</span>
 </div>
 
 <div class="desc">
 ⚠️ <b style="color:#ff4444">AVISO:</b> Alguns projetos são teorias e não tem comprovação oficial. Assista com mente aberta e tire suas conclusões. Todos os vídeos são de domínio público do YouTube.
 </div>
 
-<div class="grid">
-<div class="card"><iframe src="https://www.youtube.com/embed/dfUCM1RQT-k" allowfullscreen></iframe><div class="info"><div class="num">PROJETO #01</div><div class="title">Projeto Secreto 01</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/atzrOzIZ7Yw" allowfullscreen></iframe><div class="info"><div class="num">PROJETO #02</div><div class="title">Projeto Secreto 02</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/705g8ZM_GpE" allowfullscreen></iframe><div class="info"><div class="num">PROJETO #03</div><div class="title">Projeto Secreto 03</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/gl49VoCQXV8" allowfullscreen></iframe><div class="info"><div class="num">PROJETO #04</div><div class="title">Projeto Secreto 04</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/6lcoN1wEwfY" allowfullscreen></iframe><div class="info"><div class="num">PROJETO #05</div><div class="title">Projeto Secreto 05</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/b3jNQU5QY00" allowfullscreen></iframe><div class="info"><div class="num">PROJETO #06</div><div class="title">Projeto Secreto 06</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/u-kjiYpUZnw" allowfullscreen></iframe><div class="info"><div class="num">PROJETO #07</div><div class="title">Projeto Secreto 07</div></div></div>
-<div class="card"><iframe src="https://www.youtube.com/embed/fD-rvkWT-Ro" allowfullscreen></iframe><div class="info"><div class="num">PROJETO #08</div><div class="title">Projeto Secreto 08</div></div></div>
-</div>
+<div class="grid" id="grid"></div>
 
 <a href="../" class="voltar">⬅️ VOLTAR PARA VIAGENS NO TEMPO</a>
+
+<div id="player-overlay">
+<div id="player-top">
+<b id="player-titulo">PROJETO</b>
+<div>
+<button class="full" onclick="telaCheia()">⛶ TELA CHEIA NO SITE</button>
+<button onclick="fecharPlayer()">✕ FECHAR</button>
+</div>
+</div>
+<div id="player-box"></div>
+</div>
+
+<script>
+const videos = ["dfUCM1RQT-k","atzrOzIZ7Yw","705g8ZM_GpE","gl49VoCQXV8","6lcoN1wEwfY","b3jNQU5QY00","u-kjiYpUZnw","fD-rvkWT-Ro"];
+const grid = document.getElementById('grid');
+videos.forEach((id,i)=>{
+  const el=document.createElement('div');
+  el.className='card';
+  el.innerHTML=`<img class="thumb" src="https://img.youtube.com/vi/${id}/hqdefault.jpg" loading="lazy"><div class="play-icon"></div><div class="info"><div class="num">PROJETO #${String(i+1).padStart(2,'0')}</div><div class="title">Projeto Secreto ${String(i+1).padStart(2,'0')}</div></div>`;
+  el.onclick=()=>abrirPlayer(id,i+1);
+  grid.appendChild(el);
+});
+function abrirPlayer(id,num){
+  document.getElementById('player-titulo').innerText=`PROJETO #${String(num).padStart(2,'0')} - Banco Gratidão`;
+  document.getElementById('player-box').innerHTML=`<iframe id="iframe-player" src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&modestbranding=1&rel=0&playsinline=1&fs=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+  document.getElementById('player-overlay').classList.add('ativo');
+  document.body.style.overflow='hidden';
+}
+function fecharPlayer(){
+  document.getElementById('player-overlay').classList.remove('ativo');
+  document.getElementById('player-box').innerHTML='';
+  document.body.style.overflow='';
+}
+function telaCheia(){
+  const box=document.getElementById('player-box');
+  if(box.requestFullscreen) box.requestFullscreen();
+  else if(box.webkitRequestFullscreen) box.webkitRequestFullscreen();
+}
+document.getElementById('player-overlay').addEventListener('click',e=>{
+  if(e.target.id==='player-overlay' || e.target.id==='player-box') fecharPlayer();
+});
+</script>
 </body>
 </html>
