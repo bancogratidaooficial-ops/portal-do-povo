@@ -16,39 +16,48 @@ body{background:#000;color:#fff;font-family:Arial,sans-serif;padding:12px}
 .card-full h3{color:#8a7cff;font-size:14px}
 .card-full p{color:#ccc;font-size:12px;margin-top:6px;line-height:1.5}
 .grid-videos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-.card-video{background:#151515;border:1px solid #2a2a2a;border-radius:14px;overflow:hidden}
+.card-video{background:#151515;border:1px solid #2a2a2a;border-radius:14px;overflow:hidden;cursor:pointer;position:relative}
 .card-video:hover{border-color:#8a7cff}
-.card-video iframe{width:100%;height:160px;border:0}
+.card-video .thumb{width:100%;height:160px;object-fit:cover;display:block;background:#000}
+.card-video .play-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:40px;background:#ff0000;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 10px rgba(0,0,0,.6)}
+.card-video .play-icon:after{content:'▶';color:#fff;margin-left:3px}
 .card-video .info{padding:8px 10px}
 .card-video .num{color:#8a7cff;font-size:10px;font-weight:800}
-.card-video .title{color:#eee;font-size:11px;margin-top:2px}
+.card-video .title{color:#eee;font-size:11px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .enquete{background:#1e1e1e;border:1px dashed #8a7cff;border-radius:12px;padding:14px;text-align:center;margin-top:14px}
-.enquete button{background:#8a7cff;color:#fff;border:0;padding:8px 16px;border-radius:20px;font-weight:800;margin:6px;font-size:12px}
+.enquete button{background:#8a7cff;color:#fff;border:0;padding:8px 16px;border-radius:20px;font-weight:800;margin:6px;font-size:12px;cursor:pointer}
 a.voltar{display:block;text-align:center;background:#222;color:#8a7cff;padding:12px;border-radius:12px;text-decoration:none;font-weight:800;margin-top:16px;border:1px solid #333}
+
+/* PLAYER GRANDE DENTRO DO SITE */
+#player-overlay{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;display:none;flex-direction:column}
+#player-overlay.ativo{display:flex}
+#player-top{display:flex;justify-content:space-between;align-items:center;padding:12px;background:#111;border-bottom:1px solid #333}
+#player-top b{color:#8a7cff;font-size:13px}
+#player-top button{background:#222;color:#fff;border:1px solid #444;padding:8px 14px;border-radius:20px;font-weight:800;font-size:12px;cursor:pointer;margin-left:6px}
+#player-top button.full{background:#8a7cff;border-color:#8a7cff}
+#player-box{flex:1;display:flex;align-items:center;justify-content:center;padding:10px;background:#000}
+#player-box iframe{width:100%;max-width:900px;aspect-ratio:16/9;height:auto;border:0;border-radius:12px;background:#000}
 </style>
 </head>
 <body>
 <div class="header">
 <h1>♾️ PARADOXOS TEMPORAIS</h1>
 <p>Se você voltar no tempo, pode mudar tudo?<br>Os dilemas que a ciência não resolveu</p>
-<span class="badge">13 VÍDEOS • ARQUIVO ATUALIZADO</span>
+<span class="badge">13 VÍDEOS • PLAYER DENTRO DO SITE</span>
 </div>
 
 <div class="card-full">
 <h3>1. Paradoxo do Avô</h3>
 <p>O mais famoso. Se você volta no tempo e impede seu avô de conhecer sua avó, você nunca nasce. Se nunca nasce, como voltou no tempo para impedir?</p>
 </div>
-
 <div class="card-full">
 <h3>2. Paradoxo Bootstrap</h3>
 <p>Você volta e entrega pra Beethoven a 9ª Sinfonia. Ele copia e fica famoso. Mas quem criou a música originalmente? Ela não tem origem.</p>
 </div>
-
 <div class="card-full">
 <h3>3. Paradoxo da Predestinação</h3>
 <p>Sua tentativa de evitar um acidente é justamente o que CAUSA o acidente. Você sempre fez parte do passado.</p>
 </div>
-
 <div class="card-full">
 <h3>4. Paradoxo dos Gêmeos</h3>
 <p>Um gêmeo viaja a 99% da luz e volta 1 ano depois. Para ele passou 1 ano, para o irmão na Terra passaram 10 anos. Esse é REAL.</p>
@@ -60,23 +69,59 @@ a.voltar{display:block;text-align:center;background:#222;color:#8a7cff;padding:1
 <button onclick="alert('Voto: NÃO registrado!')">NÃO MEXERIA</button>
 </div>
 
-<p style="text-align:center;color:#8a7cff;font-size:11px;margin-top:16px;font-weight:800">📺 13 VÍDEOS DE PARADOXOS</p>
-<div class="grid-videos">
-<div class="card-video"><iframe src="https://www.youtube.com/embed/Awph-KkfIyE" allowfullscreen></iframe><div class="info"><div class="num">PARADOXO #01</div><div class="title">Paradoxo #01</div></div></div>
-<div class="card-video"><iframe src="https://www.youtube.com/embed/_aQaHTcenU0" allowfullscreen></iframe><div class="info"><div class="num">PARADOXO #02</div><div class="title">Paradoxo #02</div></div></div>
-<div class="card-video"><iframe src="https://www.youtube.com/embed/DE2KAd6UtEQ" allowfullscreen></iframe><div class="info"><div class="num">PARADOXO #03</div><div class="title">Paradoxo #03</div></div></div>
-<div class="card-video"><iframe src="https://www.youtube.com/embed/2xy0HhgQlfI" allowfullscreen></iframe><div class="info"><div class="num">PARADOXO #04</div><div class="title">Paradoxo #04</div></div></div>
-<div class="card-video"><iframe src="https://www.youtube.com/embed/705g8ZM_GpE" allowfullscreen></iframe><div class="info"><div class="num">PARADOXO #05</div><div class="title">Paradoxo #05</div></div></div>
-<div class="card-video"><iframe src="https://www.youtube.com/embed/fyqAXpJUnRQ" allowfullscreen></iframe><div class="info"><div class="num">PARADOXO #06</div><div class="title">Paradoxo #06</div></div></div>
-<div class="card-video"><iframe src="https://www.youtube.com/embed/EO12MShoBHg" allowfullscreen></iframe><div class="info"><div class="num">PARADOXO #07</div><div class="title">Paradoxo #07</div></div></div>
-<div class="card-video"><iframe src="https://www.youtube.com/embed/5zTUhp-nT4s" allowfullscreen></iframe><div class="info"><div class="num">PARADOXO #08</div><div class="title">Paradoxo #08</div></div></div>
-<div class="card-video"><iframe src="https://www.youtube.com/embed/YTbLeewi34Y" allowfullscreen></iframe><div class="info"><div class="num">PARADOXO #09</div><div class="title">Paradoxo #09</div></div></div>
-<div class="card-video"><iframe src="https://www.youtube.com/embed/ORQ3JAlcQKY" allowfullscreen></iframe><div class="info"><div class="num">PARADOXO #10</div><div class="title">Paradoxo #10</div></div></div>
-<div class="card-video"><iframe src="https://www.youtube.com/embed/CfAZo11aeVE" allowfullscreen></iframe><div class="info"><div class="num">PARADOXO #11</div><div class="title">Paradoxo #11</div></div></div>
-<div class="card-video"><iframe src="https://www.youtube.com/embed/yGj0Uv_o46Y" allowfullscreen></iframe><div class="info"><div class="num">PARADOXO #12</div><div class="title">Paradoxo #12</div></div></div>
-<div class="card-video"><iframe src="https://www.youtube.com/embed/cPsd31lYeAE" allowfullscreen></iframe><div class="info"><div class="num">PARADOXO #13</div><div class="title">Paradoxo #13</div></div></div>
-</div>
+<p style="text-align:center;color:#8a7cff;font-size:11px;margin-top:16px;font-weight:800">📺 13 VÍDEOS DE PARADOXOS - CLIQUE PARA ASSISTIR NO SITE</p>
+<div class="grid-videos" id="grid"></div>
 
 <a href="../" class="voltar">⬅️ VOLTAR PARA VIAGENS NO TEMPO</a>
+
+<!-- OVERLAY DO PLAYER -->
+<div id="player-overlay">
+<div id="player-top">
+<b id="player-titulo">PARADOXO</b>
+<div>
+<button class="full" onclick="telaCheia()">⛶ TELA CHEIA DENTRO DO SITE</button>
+<button onclick="fecharPlayer()">✕ FECHAR</button>
+</div>
+</div>
+<div id="player-box"></div>
+</div>
+
+<script>
+const videos = [
+"Awph-KkfIyE","_aQaHTcenU0","DE2KAd6UtEQ","2xy0HhgQlfI","705g8ZM_GpE","fyqAXpJUnRQ","EO12MShoBHg","5zTUhp-nT4s","YTbLeewi34Y","ORQ3JAlcQKY","CfAZo11aeVE","yGj0Uv_o46Y","cPsd31lYeAE"
+];
+const grid = document.getElementById('grid');
+videos.forEach((id,i)=>{
+  const div = document.createElement('div');
+  div.className='card-video';
+  div.innerHTML=`<img class="thumb" src="https://img.youtube.com/vi/${id}/hqdefault.jpg" loading="lazy"><div class="play-icon"></div><div class="info"><div class="num">PARADOXO #${String(i+1).padStart(2,'0')}</div><div class="title">Paradoxo #${String(i+1).padStart(2,'0')}</div></div>`;
+  div.onclick=()=>abrirPlayer(id,i+1);
+  grid.appendChild(div);
+});
+
+function abrirPlayer(id,num){
+  const overlay = document.getElementById('player-overlay');
+  const box = document.getElementById('player-box');
+  document.getElementById('player-titulo').innerText = `PARADOXO #${String(num).padStart(2,'0')} - Assistindo dentro do Banco Gratidão`;
+  box.innerHTML = `<iframe id="iframe-player" src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&modestbranding=1&rel=0&playsinline=1&fs=1&enablejsapi=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+  overlay.classList.add('ativo');
+  document.body.style.overflow='hidden';
+}
+function fecharPlayer(){
+  document.getElementById('player-overlay').classList.remove('ativo');
+  document.getElementById('player-box').innerHTML='';
+  document.body.style.overflow='';
+}
+function telaCheia(){
+  const iframe = document.getElementById('iframe-player');
+  const box = document.getElementById('player-box');
+  // fullscreen do CONTAINER, não do YouTube - não sai do site
+  if(box.requestFullscreen){ box.requestFullscreen(); }
+  else if(box.webkitRequestFullscreen){ box.webkitRequestFullscreen(); }
+}
+document.getElementById('player-overlay').addEventListener('click',function(e){
+  if(e.target.id==='player-overlay' || e.target.id==='player-box'){ fecharPlayer(); }
+});
+</script>
 </body>
 </html>
