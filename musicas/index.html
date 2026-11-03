@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ADSENSE AUTOMÁTICO - ÚNICO - PADRÃO BANCO GRATIDÃO -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263470788888608" crossorigin="anonymous"></script>
-<title>🎵 V86 PLAY LIST - Toca Músicas e Vídeos do Celular - Sem Anúncio</title>
-<meta name="description" content="V86 PLAY LIST grátis: adicione músicas e vídeos do celular, toca direto, aleatório, repetir, lista salva no celular IndexedDB, sem anúncio, compartilha no WhatsApp.">
-<link rel="canonical" href="https://bancogratidao.com.br/v86-play/">
+<title>🎵 Músicas + Harpa Cristã TV - V86 PLAY LIST - Toca do Celular + 14 Hinos Grátis - Banco Gratidão</title>
+<meta name="description" content="Músicas + Harpa Cristã TV: V86 PLAY LIST toca músicas e vídeos do celular offline sem anúncio, + 14 hinos Harpa Cristã Arpa Cristã Voz da Verdade Rose Nascimento grátis. Salva no celular IndexedDB - Portal do Povo.">
+<link rel="canonical" href="https://bancogratidao.com.br/musicas/">
 <meta name="theme-color" content="#FFD700">
-<link rel="manifest" href="./manifest.json">
+<link rel="icon" href="../icon.png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
 body{background:#050505;color:#fff;padding-bottom:90px;padding-top:105px}
@@ -17,24 +18,42 @@ body{background:#050505;color:#fff;padding-bottom:90px;padding-top:105px}
 .conteudo-editor{background:#111;border:1px solid #FFD700;border-radius:12px;padding:12px;margin:10px}
 .conteudo-editor h2{font-size:13px;color:#FFD700;margin:0 0 6px}
 .conteudo-editor p{font-size:11px;line-height:16px;color:#ccc;margin:0 0 6px}
-.alert{background:#1a1500;border:1px solid #FFD700;border-radius:12px;padding:12px;margin:10px;font-size:11px;color:#ffeeaa}
-.ad-box{background:#0a0a0a;border:1px dashed #FFD700;border-radius:12px;padding:10px;text-align:center;margin:12px 10px}
-.topo{background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;padding:16px;text-align:center;border-radius:12px;margin:10px}
+.alert{background:#1a1500;border:1px solid #FFD700;border-radius:12px;padding:12px;margin:10px;font-size:11px;color:#ffeeaa;text-align:center}
+.topo{background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;padding:14px;text-align:center;border-radius:12px;margin:10px}
 .player-box{margin:10px;background:#111;border-radius:16px;overflow:hidden;border:2px solid #FFD700}
-#player{width:100%;height:220px;background:#000}
-.controles{display:flex;justify-content:space-around;align-items:center;padding:15px;background:#1a1a1a}
-.btn-ctrl{background:#FFD700;color:#000;border:none;width:50px;height:50px;border-radius:50%;font-size:20px;font-weight:900;cursor:pointer}
-.btn-play{background:#FFD700;color:#000;border:none;width:70px;height:70px;border-radius:50%;font-size:28px;font-weight:900;cursor:pointer}
-.btn-shuffle{background:#222;color:#fff;border:2px solid #444;width:45px;height:45px;border-radius:50%;font-size:18px;cursor:pointer}
+#player{width:100%;height:220px;background:#000;display:block}
+#ytplayer{width:100%;height:220px;background:#000;display:none;border:0}
+.controles{display:flex;justify-content:space-around;align-items:center;padding:12px;background:#1a1a1a}
+.btn-ctrl{background:#FFD700;color:#000;border:none;width:48px;height:48px;border-radius:50%;font-size:18px;font-weight:900;cursor:pointer}
+.btn-play{background:#FFD700;color:#000;border:none;width:68px;height:68px;border-radius:50%;font-size:26px;font-weight:900;cursor:pointer}
+.btn-shuffle{background:#222;color:#fff;border:2px solid #444;width:44px;height:44px;border-radius:50%;font-size:16px;cursor:pointer}
 .btn-shuffle.ativo{background:#25D366;color:#fff;border-color:#25D366}
-.info-musica{padding:12px;text-align:center}
-.info-musica h3{color:#FFD700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px}
-.btn-add{display:block;width:calc(100% - 20px);margin:10px;padding:16px;background:#25D366;color:white;border:none;border-radius:12px;font-weight:900;font-size:15px;text-align:center;cursor:pointer}
+.info-musica{padding:10px;text-align:center}
+.info-musica h3{color:#FFD700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px}
+.filters{position:sticky;top:58px;z-index:98;background:#050505;padding:10px;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;border-bottom:1px solid #222}
+.filters button{background:#1a1a1a;border:1px solid #333;color:#aaa;padding:7px 14px;border-radius:20px;font-size:11px;font-weight:800;cursor:pointer;flex-shrink:0}
+.filters button.active{background:#FFD700;color:#000;border-color:#FFD700}
+.search-wrap{margin:10px;background:#111;border:2px solid #FFD700;border-radius:14px;padding:10px;display:flex;gap:8px;position:sticky;top:60px;z-index:97}
+.search-wrap input{flex:1;background:#000;border:1px solid #333;color:#fff;padding:12px;border-radius:10px;font-size:13px}
+.cat{background:#111;border-left:4px solid #FFD700;margin:16px 10px 8px;padding:10px 14px;border-radius:10px;font-weight:900;color:#FFD700;font-size:12px}
+.grid{padding:10px;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.card{background:#151515;border:1.5px solid #222;border-radius:18px;overflow:hidden;position:relative;cursor:pointer}
+.card:hover{border-color:#FFD700;transform:scale(1.02)}
+.card-img{height:130px;position:relative;background:#222;overflow:hidden}.card-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.75)}
+.badge{position:absolute;top:8px;left:8px;padding:5px 8px;border-radius:20px;font-size:8px;font-weight:900;color:#fff;z-index:2}
+.b-yellow{background:#FFD700;color:#000}.b-green{background:#00a859}.b-red{background:#ff0000}.b-blue{background:#0094ff}
+.pulse{position:absolute;top:8px;right:8px;background:#000;color:#FFD700;border:1px solid #FFD700;padding:4px 8px;border-radius:20px;font-size:8px;font-weight:900;z-index:2}
+.card-body{padding:10px}
+.card-body b{font-size:11px;color:#FFD700;display:block;line-height:13px;height:28px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.card-body span{font-size:10px;color:#aaa;display:block;margin-top:4px}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
+.btn{padding:10px 4px;border-radius:12px;font-size:11px;font-weight:900;text-align:center;text-decoration:none;display:block;cursor:pointer;border:0}
+.btn-hor{background:#FFD700;color:#000}.btn-map{background:#fff;color:#000}
+.btn-add{display:block;width:calc(100% - 20px);margin:10px;padding:16px;background:#25D366;color:white;border:none;border-radius:12px;font-weight:900;font-size:14px;text-align:center;cursor:pointer}
 .lista{margin:10px}
 .item{background:#1a1a1a;padding:12px;border-radius:10px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;border-left:4px solid #FFD700}
 .item.ativo{background:#332b00;border-left-color:#25D366}
-.item b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px;font-size:13px}
-.item span{font-size:11px;color:#888}
+.item b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px;font-size:12px}
 .bloco-share{background:linear-gradient(135deg,#FFD700,#FFA500);margin:10px;padding:18px;border-radius:16px;text-align:center;color:#000}
 .footer{max-width:1000px;margin:20px auto;text-align:center;border-top:2px solid #FFD700;padding:14px}
 .footer a{color:#FFD700;text-decoration:none;font-size:11px;margin:0 6px;font-weight:800}
@@ -44,7 +63,7 @@ body{background:#050505;color:#fff;padding-bottom:90px;padding-top:105px}
 <body>
 
 <div class="barra-fixa">
-<div style="display:flex;align-items:center;gap:8px"><div style="font-weight:900;color:#FFD700;font-size:12px">🎵 V86 PLAY</div><span class="tag" id="contadorTag">0 MÚSICAS</span></div>
+<div style="display:flex;align-items:center;gap:8px"><div style="font-weight:900;color:#FFD700;font-size:12px">🎵 MÚSICAS + HARPA CRISTÃ TV</div><span class="tag" id="contadorTag">0 MÚSICAS + 14 HINOS</span></div>
 <div style="display:flex;gap:6px">
 <span class="tag" style="background:#25D366;color:#fff">SEM ANÚNCIO</span>
 <a href="/" style="background:#222;color:#fff;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:900;text-decoration:none">✕ FECHAR</a>
@@ -52,28 +71,24 @@ body{background:#050505;color:#fff;padding-bottom:90px;padding-top:105px}
 </div>
 
 <div class="conteudo-editor">
-<h2>V86 PLAY LIST - Seu Player de Músicas e Vídeos Direto do Celular Sem Anúncio</h2>
-<p>Quer ouvir música sem anúncio chato? O V86 PLAY LIST do Banco Gratidão é grátis: adicione músicas e vídeos direto do celular, salva no celular via IndexedDB, toca mesmo offline, modo aleatório 🔀 e repetir 🔁, próximo e anterior.</p>
-<p>Como usar: toque em Adicionar Músicas e Vídeos, escolha do celular, toque na lista pra tocar. Player com controles completo, compartilha no WhatsApp, instala como app. Tudo seu, sem anúncio, sem internet. Salve: bancogratidao.com.br/v86-play/</p>
+<h2>Músicas + Harpa Cristã TV - Player do Celular Offline + 14 Hinos Grátis</h2>
+<p>Fusão oficial Banco Gratidão pastas Músicas + Harpa Cristã: V86 PLAY LIST toca suas músicas e vídeos direto do celular offline sem anúncio, salva via IndexedDB, + Harpa Cristã TV com 14 hinos grátis Arpa Cristã, Voz da Verdade, Rose Nascimento, Irmão Lázaro, Aline Barros. Tudo em um player só, cards com fotos.</p>
+<p>Como usar: toque em Adicionar Músicas do Celular, ou toque nos cards de hinos abaixo pra tocar no mesmo player. Busca rápida, aleatório 🔀, repetir 🔁. Salve: bancogratidao.com.br/musicas/ e bancogratidao.com.br/harpa-crista/</p>
 </div>
 
-<div class="alert">🎵 DICA: Adicione suas músicas favoritas uma vez, fica salvo pra sempre no celular. Use 🔀 aleatório e 🔁 repetir pra curtir. Toca vídeo também!</div>
-
-<div class="ad-box"><small>PUBLICIDADE</small>
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2263470788888608" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+<div class="alert">🎵 PASTA MÚSICAS + HARPA CRISTÃ FUNDIDAS - Suas músicas locais offline + 14 hinos no mesmo player - Toque nos cards abaixo</div>
 
 <div class="topo">
-<h1 style="font-size:18px">V86 PLAY LIST 🎵</h1>
-<p style="font-size:12px;font-weight:800">Seu som direto do celular - Sem anúncio - Offline</p>
+<b style="font-size:16px">🎵 MÚSICAS DO CELULAR + 🙏 HARPA CRISTÃ TV</b><br>
+<span style="font-size:11px;font-weight:800">Sem anúncio - Offline - 14 hinos grátis - Banco Gratidão</span>
 </div>
 
 <div class="player-box">
 <video id="player" controls playsinline></video>
+<iframe id="ytplayer" allowfullscreen></iframe>
 <div class="info-musica">
-<h3 id="nomeAtual">Nenhuma música selecionada</h3>
-<p id="contador" style="font-size:11px;color:#888">0 músicas - Adicione acima</p>
+<h3 id="nomeAtual">Nenhuma música selecionada - Toque em um card de hino abaixo</h3>
+<p id="contador" style="font-size:11px;color:#888">0 músicas locais • 14 hinos Harpa • Toque pra tocar</p>
 </div>
 <div class="controles">
 <button class="btn-shuffle" id="btnShuffle" onclick="toggleShuffle()" title="Aleatório">🔀</button>
@@ -85,40 +100,79 @@ body{background:#050505;color:#fff;padding-bottom:90px;padding-top:105px}
 </div>
 
 <input type="file" id="inputFile" accept="audio/*,video/*" multiple style="display:none">
-<button class="btn-add" onclick="document.getElementById('inputFile').click()">➕ ADICIONAR MÚSICAS E VÍDEOS DO CELULAR</button>
+<button class="btn-add" onclick="document.getElementById('inputFile').click()">➕ ADICIONAR MÚSICAS E VÍDEOS DO CELULAR - OFFLINE</button>
 
-<div class="lista" id="lista"></div>
+<div class="lista" id="listaLocal"></div>
 
-<div class="ad-box"><small>PUBLICIDADE - MEIO</small>
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2263470788888608" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<div class="search-wrap">
+<input id="q" placeholder="🔍 Buscar hino Harpa... ex: Arpa, Voz da Verdade, Rose, Aline" oninput="renderHarpa()">
+<button onclick="renderHarpa()" style="background:#FFD700;color:#000;border:0;padding:10px 14px;border-radius:10px;font-weight:900;cursor:pointer">🔍 BUSCAR</button>
 </div>
+
+<div class="filters">
+<button class="active" onclick="filtrar('todos',this)">TODOS 14</button>
+<button onclick="filtrar('arpa',this)">ARPA CRISTÃ</button>
+<button onclick="filtrar('voz',this)">VOZ DA VERDADE</button>
+<button onclick="filtrar('rose',this)">ROSE / ALINE</button>
+</div>
+
+<div class="cat">🙏 HARPA CRISTÃ TV - 14 HINOS GRÁTIS - CARDS COM FOTO - TOQUE PRA TOCAR NO PLAYER ACIMA</div>
+<div class="grid" id="gridHarpa"></div>
 
 <div class="bloco-share">
-<h3 style="margin:0 0 8px 0;font-size:15px">Curtiu a playlist? 💰</h3>
-<p style="margin:0 0 12px 0;font-size:12px;font-weight:700">Compartilhe o V86 PLAY com os amigos!</p>
-<button onclick="tocarAleatorio()" style="width:100%;padding:12px;margin-bottom:8px;background:#000;color:#FFD700;border:none;border-radius:10px;font-weight:900;font-size:13px;cursor:pointer">🔀 TOCAR MÚSICAS ALEATORIAMENTE</button>
+<h3 style="margin:0 0 8px 0;font-size:15px">Curtiu Músicas + Harpa? 💰🙏</h3>
+<p style="margin:0 0 12px 0;font-size:12px;font-weight:700">Compartilhe com os amigos no WhatsApp!</p>
+<button onclick="tocarAleatorio()" style="width:100%;padding:12px;margin-bottom:8px;background:#000;color:#FFD700;border:none;border-radius:10px;font-weight:900;font-size:13px;cursor:pointer">🔀 TOCAR ALEATÓRIO - MÚSICA OU HINO</button>
 <button onclick="compartilharApp()" style="width:100%;padding:12px;margin-bottom:8px;background:#25D366;color:white;border:none;border-radius:10px;font-weight:900;font-size:13px;cursor:pointer">💚 COMPARTILHAR NO WHATSAPP</button>
-<button onclick="compartilharApp()" style="width:100%;padding:12px;background:#000;color:#FFD700;border:none;border-radius:10px;font-weight:900;font-size:13px;cursor:pointer">👥 CONVIDAR AMIGO</button>
-<p style="margin-top:12px;font-size:11px"><a href="/privacidade/" style="color:#000;text-decoration:underline;font-weight:800">🔒 Política de Privacidade</a> | <a href="/" style="color:#000;text-decoration:underline;font-weight:800">🏠 Portal do Povo</a></p>
-</div>
-
-<button id="btnInstalar" style="display:none; width: calc(100% - 20px); margin: 10px; padding: 14px; background: #FFD700; color: #000; border: none; border-radius: 12px; font-weight: 900; font-size: 14px;cursor:pointer">📲 INSTALAR APP V86 PLAY</button>
-
-<div class="ad-box"><small>PUBLICIDADE - RODAPÉ</small>
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2263470788888608" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<button id="btnInstalar" style="display:none;width:100%;padding:12px;background:#000;color:#FFD700;border:none;border-radius:10px;font-weight:900;font-size:13px;cursor:pointer">📲 INSTALAR APP MÚSICAS + HARPA</button>
+<p style="margin-top:12px;font-size:11px"><a href="/privacidade/" style="color:#000;text-decoration:underline;font-weight:800">🔒 Privacidade</a> | <a href="/" style="color:#000;text-decoration:underline;font-weight:800">🏠 Portal do Povo</a></p>
 </div>
 
 <footer class="footer">
 <a href="/">🏠 PORTAL</a>
 <a href="/privacidade/">🔒 PRIVACIDADE</a>
 <a href="/contato/">📞 CONTATO</a>
-<p style="color:#888;font-size:10px;margin-top:8px">Músicas salvas no celular via IndexedDB - Toca offline - Sem anúncio - 100% grátis</p>
+<p style="color:#888;font-size:10px;margin-top:8px">Músicas salvas no celular via IndexedDB offline - Harpa Cristã TV hinos incorporados do YouTube nocookie - Sem hospedagem própria - Banco Gratidão 2026 - Pastas musicas e harpa-crista</p>
 </footer>
 
 <script>
-let db; let musicas = []; let indiceAtual = -1; let urls = {}; let modoAleatorio = false; let modoLoop = false;
+const listaHarpa = [
+{id:"uPgVjWvik7o",titulo:"01 - Arpa Cristã - Harpa Cristã TV",c:"arpa"},
+{id:"kxfcTWXHOFI",titulo:"02 - Voz da Verdade - Harpa",c:"voz"},
+{id:"LelPJzfcjZM",titulo:"03 - Eram Cem Ovelhas - Harpa",c:"arpa"},
+{id:"XhVnibJZ9wI",titulo:"04 - Rose Nascimento - Harpa",c:"rose"},
+{id:"AUAmWpul5Vg",titulo:"05 - Irmão Lázaro - Harpa",c:"arpa"},
+{id:"dp_A6foVD84",titulo:"06 - Sobre as Ondas do Mar - Harpa",c:"arpa"},
+{id:"sSE6SKN5QUM",titulo:"07 - Mais Firme do que Nunca - Harpa",c:"arpa"},
+{id:"xAQscRpZCFo",titulo:"08 - Firme nas Promessas - Harpa",c:"arpa"},
+{id:"gQSjDha-1WE",titulo:"09 - Conversão - Harpa",c:"arpa"},
+{id:"XTcpnHDXsqQ",titulo:"10 - Rosa Vermelha - Harpa",c:"arpa"},
+{id:"mFPH7Hx1KZA",titulo:"11 - Os Guerreiros se Preparam - Harpa",c:"arpa"},
+{id:"q_krGry3yFE",titulo:"12 - Grandioso - Harpa",c:"arpa"},
+{id:"9DGVUYbrqHw", titulo:"13 - Voz da Verdade - Harpa",c:"voz"},
+{id:"1YXCbXj0V6o", titulo:"14 - Aline Barros - Harpa",c:"rose"}
+];
+let catAtual='todos';
+function filtrar(cat, el){
+ catAtual=cat;
+ document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
+ if(el) el.classList.add('active');
+ renderHarpa();
+}
+function renderHarpa(){
+let q=document.getElementById('q').value.toLowerCase();
+let g=document.getElementById('gridHarpa');g.innerHTML='';
+let f=listaHarpa.filter(v=>{
+  let okBusca = v.titulo.toLowerCase().includes(q);
+  let okCat = catAtual==='todos' || v.c.includes(catAtual);
+  return okBusca && okCat;
+});
+document.getElementById('contadorTag').innerText = musicas.length + ' MÚSICAS + ' + f.length + ' HINOS';
+f.forEach((v)=>{
+g.innerHTML+=`<div class="card" onclick="playHarpa('${v.id}','${v.titulo.replace(/'/g,"\\'")}')"><div class="card-img"><img src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg" loading="lazy"><span class="badge b-yellow">${v.c.toUpperCase()} - HARPA CRISTÃ TV</span><span class="pulse">▶ TOCAR</span><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center"><div style="background:#FFD700;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#000;font-weight:900;font-size:20px">▶</div></div></div><div class="card-body"><b>${v.titulo}</b><span>🙏 Harpa Cristã TV - Grátis - YouTube oficial - Portal do Povo</span><div class="btns"><span class="btn btn-hor">▶ TOCAR NO PLAYER</span><span class="btn btn-map">🙏 HARPA</span></div></div></div>`;
+});
+}
+let db; let musicas = []; let indiceAtual = -1; let urls = {}; let modoAleatorio = false; let modoLoop = false; let tocandoHarpa = false; let harpaAtual = null;
 const request = indexedDB.open('V86PlayDB', 1);
 request.onupgradeneeded = e => { e.target.result.createObjectStore('musicas', {keyPath: 'id', autoIncrement: true}); };
 request.onsuccess = e => { db = e.target.result; carregarMusicas(); };
@@ -127,7 +181,7 @@ function carregarMusicas(){
   req.onsuccess = () => {
     musicas = req.result;
     musicas.forEach(m => { if(urls[m.id]) URL.revokeObjectURL(urls[m.id]); urls[m.id] = URL.createObjectURL(m.blob); });
-    atualizarLista();
+    atualizarListaLocal(); renderHarpa();
   };
 }
 document.getElementById('inputFile').addEventListener('change', async (e)=>{
@@ -136,47 +190,71 @@ document.getElementById('inputFile').addEventListener('change', async (e)=>{
   for(let file of arquivos){ await new Promise(res=>{ const r = store.add({nome: file.name, tipo: file.type, blob: file}); r.onsuccess = res; }); }
   tx.oncomplete = carregarMusicas; e.target.value = '';
 });
-function atualizarLista(){
-  const lista = document.getElementById('lista');
-  document.getElementById('contador').innerText = musicas.length + ' músicas/vídeos' + (modoAleatorio? ' • 🔀 Aleatório' : '');
-  document.getElementById('contadorTag').innerText = musicas.length + ' MÚSICAS';
-  lista.innerHTML = '';
-  if(musicas.length===0){lista.innerHTML='<div style="text-align:center;color:#666;padding:20px">Nenhuma música ainda.<br><small>Toque em Adicionar acima</small></div>';return}
+function atualizarListaLocal(){
+  const lista = document.getElementById('listaLocal');
+  document.getElementById('contador').innerText = musicas.length + ' músicas/vídeos locais • 14 hinos Harpa • ' + (modoAleatorio? '🔀 Aleatório' : 'Toque pra tocar');
+  lista.innerHTML = musicas.length? `<b style="color:#FFD700;font-size:12px">📍 SUAS MÚSICAS SALVAS NO CELULAR (${musicas.length}) - OFFLINE - TOCA SEM INTERNET</b>` : '<div style="text-align:center;color:#666;padding:10px;font-size:11px">Nenhuma música local ainda - Toque em ADICIONAR acima ou toque nos cards de hinos Harpa abaixo</div>';
   musicas.forEach((m, i)=>{
-    const ativo = i === indiceAtual? 'ativo' : '';
-    lista.innerHTML += `<div class="item ${ativo}" onclick="tocar(${i})"><div><b>${m.nome}</b><span>${m.tipo.includes('video')? '🎬 Vídeo' : '🎵 Áudio'} • ${m.tipo}</span></div><div><span onclick="event.stopPropagation(); remover(${m.id})" style="color:#ff4444;padding:10px;cursor:pointer;font-weight:900">🗑️</span></div></div>`;
+    const ativo = i === indiceAtual && !tocandoHarpa ? 'ativo' : '';
+    lista.innerHTML += `<div class="item ${ativo}" onclick="tocarLocal(${i})"><div><b>🎵 ${m.nome}</b><span>${m.tipo.includes('video')? '🎬 Vídeo' : '🎵 Áudio'} • ${m.tipo}</span></div><div><span onclick="event.stopPropagation(); remover(${m.id})" style="color:#ff4444;padding:10px;cursor:pointer;font-weight:900">🗑️</span></div></div>`;
   });
 }
-function tocar(i){
+function mostrarPlayerLocal(){
+  document.getElementById('player').style.display='block';
+  document.getElementById('ytplayer').style.display='none';
+  document.getElementById('ytplayer').src='';
+  tocandoHarpa=false;
+}
+function tocarLocal(i){
+  mostrarPlayerLocal();
   indiceAtual = i; const m = musicas[i]; const player = document.getElementById('player');
   player.src = urls[m.id]; player.play();
-  document.getElementById('nomeAtual').innerText = m.nome;
-  document.getElementById('btnPlay').innerText = '⏸️'; atualizarLista();
+  document.getElementById('nomeAtual').innerText = '🎵 Tocando local offline: ' + m.nome;
+  document.getElementById('btnPlay').innerText = '⏸️'; atualizarListaLocal();
+}
+function playHarpa(id,titulo){
+  const yt = document.getElementById('ytplayer');
+  const local = document.getElementById('player');
+  local.pause(); local.src=''; local.style.display='none';
+  yt.style.display='block';
+  yt.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1';
+  tocandoHarpa=true; harpaAtual={id,titulo};
+  document.getElementById('nomeAtual').innerText = '🙏 Tocando Harpa Cristã: ' + titulo;
+  document.getElementById('btnPlay').innerText = '⏸️';
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 function playPause(){
+  if(tocandoHarpa){
+    const yt = document.getElementById('ytplayer');
+    if(yt.src){ yt.src=''; document.getElementById('btnPlay').innerText='▶️'; document.getElementById('nomeAtual').innerText='Harpa pausada - Toque em outro hino'; }
+    else if(harpaAtual){ playHarpa(harpaAtual.id,harpaAtual.titulo); }
+    return;
+  }
   const player = document.getElementById('player');
   if(player.paused){
-    if(indiceAtual === -1 && musicas.length > 0){ if(modoAleatorio) tocarAleatorio(); else tocar(0); }
+    if(indiceAtual === -1 && musicas.length > 0){ if(modoAleatorio) tocarAleatorio(); else tocarLocal(0); }
     else if(player.src) player.play();
     document.getElementById('btnPlay').innerText = '⏸️';
   } else { player.pause(); document.getElementById('btnPlay').innerText = '▶️'; }
 }
-function proxima(){ if(!musicas.length) return; if(modoAleatorio){ tocarAleatorio(); return; } let prox = indiceAtual + 1; if(prox >= musicas.length) prox = 0; tocar(prox); }
-function anterior(){ if(!musicas.length) return; if(modoAleatorio){ tocarAleatorio(); return; } let ant = indiceAtual - 1; if(ant < 0) ant = musicas.length - 1; tocar(ant); }
+function proxima(){ if(tocandoHarpa){ let idx=listaHarpa.findIndex(h=>h.id===harpaAtual?.id); let prox=(idx+1)%listaHarpa.length; playHarpa(listaHarpa[prox].id,listaHarpa[prox].titulo); return; } if(!musicas.length) return; if(modoAleatorio){ tocarAleatorio(); return; } let prox = indiceAtual + 1; if(prox >= musicas.length) prox = 0; tocarLocal(prox); }
+function anterior(){ if(tocandoHarpa){ let idx=listaHarpa.findIndex(h=>h.id===harpaAtual?.id); let ant=idx-1; if(ant<0) ant=listaHarpa.length-1; playHarpa(listaHarpa[ant].id,listaHarpa[ant].titulo); return; } if(!musicas.length) return; if(modoAleatorio){ tocarAleatorio(); return; } let ant = indiceAtual - 1; if(ant < 0) ant = musicas.length - 1; tocarLocal(ant); }
 function tocarAleatorio(){
-  if(!musicas.length) return alert('Adicione músicas primeiro! Toque em Adicionar acima.');
-  let novoIndice; do{ novoIndice = Math.floor(Math.random() * musicas.length); } while(musicas.length > 1 && novoIndice === indiceAtual);
-  tocar(novoIndice); if(!modoAleatorio) toggleShuffle();
+  const total = musicas.length + listaHarpa.length;
+  if(total===0) return alert('Adicione músicas ou escolha um hino Harpa!');
+  if(Math.random()<0.5 && musicas.length){ let novoIndice; do{ novoIndice = Math.floor(Math.random() * musicas.length); } while(musicas.length > 1 && novoIndice === indiceAtual && !tocandoHarpa); tocarLocal(novoIndice); }
+  else { let r = Math.floor(Math.random()*listaHarpa.length); playHarpa(listaHarpa[r].id,listaHarpa[r].titulo); }
+  if(!modoAleatorio) toggleShuffle();
 }
 function toggleShuffle(){
   modoAleatorio =!modoAleatorio; const btn = document.getElementById('btnShuffle');
-  if(modoAleatorio){ btn.classList.add('ativo'); btn.style.background = '#25D366'; } else { btn.classList.remove('ativo'); btn.style.background = '#222'; }
-  atualizarLista();
+  if(modoAleatorio){ btn.classList.add('ativo'); } else { btn.classList.remove('ativo'); }
+  atualizarListaLocal();
 }
 function toggleLoop(){
   modoLoop =!modoLoop; const player = document.getElementById('player'); const btn = document.getElementById('btnLoop');
   player.loop = modoLoop;
-  if(modoLoop){ btn.classList.add('ativo'); btn.style.background = '#FFD700'; btn.style.color = '#000'; } else { btn.classList.remove('ativo'); btn.style.background = '#222'; btn.style.color = '#fff'; }
+  if(modoLoop){ btn.classList.add('ativo'); } else { btn.classList.remove('ativo'); }
 }
 function remover(id){
   if(!confirm('Remover essa música/vídeo?')) return;
@@ -192,8 +270,8 @@ function remover(id){
 }
 document.getElementById('player').addEventListener('ended', ()=>{ if(modoLoop) return; proxima(); });
 function compartilharApp() {
-  const url = window.location.href; const texto = 'Baixa o V86 PLAY LIST! Meu app de música que toca direto do celular, sem anúncio, offline: ';
-  if (navigator.share) { navigator.share({ title: 'V86 PLAY LIST', text: texto, url: url }); }
+  const url = window.location.href; const texto = 'Baixa o Músicas + Harpa Cristã TV! Meu app de música offline sem anúncio + 14 hinos grátis: ';
+  if (navigator.share) { navigator.share({ title: 'Músicas + Harpa Cristã TV', text: texto, url: url }); }
   else { const msg = encodeURIComponent(texto + url); window.open('https://wa.me/?text=' + msg, '_blank'); }
 }
 let appParaInstalar = null;
@@ -202,12 +280,13 @@ document.getElementById('btnInstalar').addEventListener('click', async () => {
   if (!appParaInstalar) return; appParaInstalar.prompt(); await appParaInstalar.userChoice;
   document.getElementById('btnInstalar').style.display = 'none'; appParaInstalar = null;
 });
+renderHarpa();
 if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js').catch(()=>{}); }
 </script>
 
 <button class="fab-mini" id="fabMini" title="Instalar">⬇️</button>
 <style>#btnChamarPortal{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);z-index:999;background:#111;border:2px solid #FFD700;border-radius:24px;padding:8px 14px;display:flex;align-items:center;gap:10px}#btnChamarPortal b{color:#fff;font-size:11px}#btnChamarPortal .abrir{background:#FFD700;color:#000;padding:6px 14px;border-radius:20px;font-weight:900;font-size:11px;text-decoration:none}#btnChamarPortal .fechar{color:#666;cursor:pointer}</style>
-<div id="btnChamarPortal"><div><b>🔴 PORTAL DO POVO</b></div><a class="abrir" href="/">ABRIR</a><span class="fechar" onclick="this.parentElement.style.display='none'">✕</span></div>
+<div id="btnChamarPortal"><div><b>🔴 PORTAL DO POVO - MÚSICAS + HARPA</b></div><a class="abrir" href="/">ABRIR</a><span class="fechar" onclick="this.parentElement.style.display='none'">✕</span></div>
 <script>
 let dpMini=null;
 window.addEventListener('beforeinstallprompt', e=>{e.preventDefault();dpMini=e;document.getElementById('fabMini').style.display='flex';});
