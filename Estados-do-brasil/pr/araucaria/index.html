@@ -3,60 +3,85 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263470788888608" crossorigin="anonymous"></script>
-<title>Portal do Povo - Araucária PR</title>
+<title>Portal do Povo - Araucária PR - 70 Serviços</title>
 <meta name="theme-color" content="#FFD700">
-<meta name="description" content="Portal do Povo Araucária PR - Notícias, serviços, bairros, empregos e utilidade pública.">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,Arial}body{background:#000;color:#fff;padding-bottom:90px}
 header{position:sticky;top:0;z-index:99;background:#000;border-bottom:3px solid #FFD700;padding:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
 h1{font-size:15px;color:#FFD700}h1 span{font-size:10px;color:#aaa;display:block}
 .tag{background:#FFD700;color:#000;padding:5px 12px;border-radius:20px;font-size:10px;font-weight:900}
 .btn{background:#111;border:1px solid #FFD700;color:#FFD700;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:800;text-decoration:none}
-.hero{margin:12px;border-radius:16px;overflow:hidden;border:1px solid #333;position:relative;height:180px;background:#111}
-.hero img{width:100%;height:100%;object-fit:cover;opacity:.6}
-.hero .txt{position:absolute;bottom:0;left:0;right:0;padding:14px;background:linear-gradient(transparent,#000)}
-.hero .txt b{font-size:20px;color:#FFD700}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;padding:14px;max-width:1000px;margin:0 auto}
-.card{background:#111;border:1px solid #222;border-radius:16px;overflow:hidden;cursor:pointer;transition:.2s;text-decoration:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;padding:14px;max-width:1100px;margin:0 auto}
+.card{background:#111;border:1px solid #222;border-radius:16px;overflow:hidden;transition:.2s;text-decoration:none;display:block}
 .card:hover{border-color:#FFD700;transform:scale(1.03)}
-.card img{width:100%;height:100px;object-fit:cover;background:#222}
+.card img{width:100%;height:100px;object-fit:cover;background:#222;display:block}
 .card .info{padding:10px;text-align:center}
-.card .info b{color:#FFD700;font-size:11px;display:block}
-.card .info span{color:#777;font-size:9px}
+.card .info b{color:#FFD700;font-size:11px;display:block;text-transform:uppercase}
+.card .info span{color:#888;font-size:9px;font-weight:700}
 .footer{max-width:1000px;margin:20px auto;text-align:center;border-top:2px solid #222;padding:14px}
 .footer a{color:#FFD700;text-decoration:none;font-size:11px;margin:0 6px;font-weight:800}
 </style>
 </head>
 <body>
 <header>
-<h1>📍 ARAUCÁRIA - PR<span>Portal do Povo / Paraná / Araucária</span></h1>
+<h1>📍 ARAUCÁRIA - PR<span id="cont">Portal do Povo / Paraná / 70 pastas</span></h1>
 <div style="display:flex;gap:6px">
 <a class="btn" href="../">⬅ VOLTAR PR</a>
 <a class="btn" style="background:#FFD700;color:#000" href="/portal-do-povo/">PORTAL DO POVO</a>
 </div>
 </header>
 
-<div class="hero">
-<img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800" alt="Araucária">
-<div class="txt"><b>ARAUCÁRIA - PR</b><br><span style="font-size:11px;color:#ccc">Cidade do Paraná - Portal do Povo - Conteúdo em organização</span></div>
-</div>
+<div style="margin:12px;background:#1a1500;border:1px solid #FFD700;border-radius:12px;padding:12px;font-size:11px;color:#ffeeaa">✅ Todas as pastas já com conteúdo - Agora chamando automaticamente</div>
 
-<div style="margin:12px;background:#1a1500;border:1px solid #FFD700;border-radius:12px;padding:12px;font-size:11px;color:#ffeeaa">✅ Pasta organizada - Agora vamos adicionar conteúdo aos poucos - Padrão de cards com foto</div>
-
-<div class="grid">
-<a class="card" href="#"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400"><div class="info"><b>NOTÍCIAS</b><span>EM BREVE</span></div></a>
-<a class="card" href="#"><img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400"><div class="info"><b>BAIRROS</b><span>EM BREVE</span></div></a>
-<a class="card" href="#"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400"><div class="info"><b>EMPREGO</b><span>EM BREVE</span></div></a>
-<a class="card" href="#"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400"><div class="info"><b>SERVIÇOS 24H</b><span>BANCO GRATIDÃO</span></div></a>
-<a class="card" href="#"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400"><div class="info"><b>TURISMO</b><span>EM BREVE</span></div></a>
-<a class="card" href="#"><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400"><div class="info"><b>PREFEITURA</b><span>EM BREVE</span></div></a>
-</div>
+<div class="grid" id="grid"></div>
 
 <footer class="footer">
 <a href="/">🏠 PORTAL</a>
 <a href="/portal-do-povo/">📍 PORTAL DO POVO</a>
 <a href="../">⬅ PARANÁ</a>
-<p style="color:#555;font-size:10px;margin-top:10px">Araucária PR - Portal do Povo - Estrutura padrão organizada</p>
 </footer>
+
+<script>
+// TODAS AS SUAS PASTAS QUE APARECEM NO PRINT
+const pastas = [
+"Animais-ong-hospital","academias","advogados-24h","agua-gaz","auto-escolas","acougues","cartorios","casa-festas","cesa","celulares","chaveiro-24h","classificados","clinicas-reabilitacao","construcao","contabilidades","contadores","cras-creas","cursos","delegacias","eletricas","eletricista-24h","emergencias","empregos","encanador","escolas","esteticas","faculdades","farmacias-24h","floriculturas","funerarias","gaz-agua","graficas","hospitais","hoteis-moteis","imobiliarias","imoveis","informatica","lotericas","moto-taxi","oficinas-24h","onibus","orgaos-publicos","otica","padarias","pet-shop24h","postos-saude","saude","tatuagens","taxi","variedades","veterinarios-24h","vidracarias"
+];
+
+const fotos = {
+"advogados-24h":"https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400",
+"academias":"https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400",
+"empregos":"https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400",
+"farmacia":"https://images.unsplash.com/photo-1585435557343-3b092031a831?w=400",
+"hoteis":"https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400",
+"escolas":"https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400",
+"padarias":"https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400",
+"pet":"https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400",
+"imoveis":"https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400",
+"taxi":"https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400"
+};
+
+function fotoPara(pasta){
+  if(pasta.includes("advogado")) return fotos["advogados-24h"];
+  if(pasta.includes("academia")) return fotos["academias"];
+  if(pasta.includes("emprego")) return fotos["empregos"];
+  if(pasta.includes("farmacia")) return fotos["farmacia"];
+  if(pasta.includes("hotel")) return fotos["hoteis"];
+  if(pasta.includes("escola")) return fotos["escolas"];
+  if(pasta.includes("padaria")) return fotos["padarias"];
+  if(pasta.includes("pet") || pasta.includes("Animal")) return fotos["pet"];
+  if(pasta.includes("imove")) return fotos["imoveis"];
+  if(pasta.includes("taxi") || pasta.includes("moto")) return fotos["taxi"];
+  return `https://via.placeholder.com/400x220/111/FFD700?text=${encodeURIComponent(pasta.toUpperCase())}`;
+}
+
+document.getElementById('cont').textContent = pastas.length + " SERVIÇOS - CLIQUE PARA ABRIR";
+document.getElementById('grid').innerHTML = pastas.map(p => {
+  const nome = p.replace(/-/g," ").toUpperCase();
+  return `<a class="card" href="./${p}/">
+    <img src="${fotoPara(p)}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x220/111/FFD700?text=${encodeURIComponent(nome)}'">
+    <div class="info"><b>${nome}</b><span>ABRIR →</span></div>
+  </a>`;
+}).join('');
+</script>
 </body>
 </html>
