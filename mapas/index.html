@@ -3,91 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ADSENSE AUTOMÁTICO - ÚNICO - PADRÃO BANCO GRATIDÃO -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263470788888608" crossorigin="anonymous"></script>
-<title>🗺️ Mapas Curitiba - Busca Endereço, Rota, Bairros - Portal do Povo</title>
-<meta name="description" content="Mapas de Curitiba grátis: busque endereço, shopping, hospital, bairro e abra no Google Maps. Salva locais favoritos offline. Portal do Povo Curitiba.">
+<title>🗺️ Mapas Curitiba - Busca Endereço, Rota, Bairros, Shopping, Hospital - Portal do Povo</title>
+<meta name="description" content="Mapas de Curitiba grátis: busque endereço, shopping, hospital, UPA 24h, bairro e abra no Google Maps com rota. Centro, Boqueirão, Tatuquara, Shopping. Salva locais favoritos offline.">
 <link rel="canonical" href="https://bancogratidao.com.br/mapas/">
 <meta name="theme-color" content="#FFD700">
+<link rel="icon" href="../icon.png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
 body{background:#050505;color:#fff;padding-bottom:90px}
-header{position:sticky;top:0;z-index:99;background:#000;border-bottom:3px solid #FFD700;padding:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:99;background:#000;border-bottom:3px solid #FFD700;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
 .tag{font-size:9px;font-weight:900;background:#FFD700;color:#000;padding:5px 10px;border-radius:20px}
 .conteudo-editor{background:#111;border:1px solid #FFD700;border-radius:12px;padding:12px;margin:10px}
 .conteudo-editor h2{font-size:13px;color:#FFD700;margin:0 0 6px}
 .conteudo-editor p{font-size:11px;line-height:16px;color:#ccc;margin:0 0 6px}
-.alert{background:#1a1500;border:1px solid #FFD700;border-radius:12px;padding:12px;margin:10px;font-size:11px;color:#ffeeaa}
-.ad-box{background:#0a0a0a;border:1px dashed #FFD700;border-radius:12px;padding:10px;text-align:center;margin:12px 10px}
-.filters{display:flex;gap:6px;overflow-x:auto;white-space:nowrap;padding:10px 10px 0}
-.filters button{background:#1a1a1a;border:1px solid #333;color:#aaa;padding:7px 14px;border-radius:20px;font-size:11px;font-weight:800;cursor:pointer;flex-shrink:0}
-.filters button.active{background:#FFD700;color:#000;border-color:#FFD700}
-.box{max-width:800px;margin:0 auto;padding:10px}
-input,button{width:100%;padding:13px;border-radius:12px;border:none;margin:5px 0;font-weight:900}
-input{background:#222;color:#fff;border:1px solid #333}
-.btn-busca{background:#FFD700;color:#000}
-.btn-voltar{background:#111;color:#FFD700;border:1px solid #FFD700}
-iframe{width:100%;height:380px;border:2px solid #FFD700;border-radius:12px;background:#fff;margin-top:10px}
+.alert{background:#1a1500;border:1px solid #FFD700;border-radius:12px;padding:12px;margin:10px;font-size:11px;color:#ffeeaa;text-align:center}
+.busca-wrap{margin:10px;background:#111;border:2px solid #FFD700;border-radius:14px;padding:10px;display:flex;gap:8px;position:sticky;top:60px;z-index:98}
+.busca-wrap input{flex:1;background:#000;border:1px solid #333;color:#fff;padding:14px;border-radius:12px;font-size:13px;font-weight:700}
+.busca-wrap button{background:#FFD700;color:#000;border:0;padding:12px 16px;border-radius:12px;font-weight:900;font-size:12px;cursor:pointer}
+.cat{background:#111;border-left:4px solid #FFD700;margin:16px 10px 8px;padding:10px 14px;border-radius:10px;font-weight:900;color:#FFD700;font-size:12px}
+.grid{padding:10px;display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
+.card{background:#151515;border:1.5px solid #222;border-radius:18px;overflow:hidden;position:relative}
+.card:hover{border-color:#FFD700}
+.card-img{height:150px;position:relative;background:#222;overflow:hidden}.card-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.75)}
+.badge{position:absolute;top:10px;left:10px;padding:6px 10px;border-radius:20px;font-size:8px;font-weight:900;color:#fff;z-index:2}
+.b-yellow{background:#FFD700;color:#000}.b-blue{background:#0094ff}.b-green{background:#00a859}.b-red{background:#ff0000}.b-orange{background:#ff6a00}
+.pulse{position:absolute;top:10px;right:10px;background:#000;color:#FFD700;border:1px solid #FFD700;padding:5px 10px;border-radius:20px;font-size:8px;font-weight:900;z-index:2}
+.card-body{padding:12px}
+.card-body b{font-size:13px;color:#FFD700;display:block}
+.card-body span{font-size:11px;color:#aaa;display:block;margin-top:4px;line-height:15px}
+.card-body .end{font-size:11px;color:#fff;margin-top:8px;background:#0a0a0a;padding:9px;border-radius:10px;border-left:3px solid #FFD700}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}
+.btn{padding:11px 4px;border-radius:12px;font-size:11px;font-weight:900;text-align:center;text-decoration:none;display:block}
+.btn-hor{background:#FFD700;color:#000}.btn-map{background:#fff;color:#000}
+.box{max-width:1000px;margin:0 auto;padding:10px}
+iframe{width:100%;height:360px;border:2px solid #FFD700;border-radius:14px;background:#fff;margin-top:10px}
 .item{background:#151515;padding:12px;border-radius:12px;margin:6px 0;display:flex;justify-content:space-between;align-items:center;border:1px solid #222}
 .lixeira{background:#ff0000;color:#fff;padding:8px 12px;border-radius:10px;width:auto;border:none;cursor:pointer;font-weight:900}
-.footer{max-width:1000px;margin:20px auto;text-align:center;border-top:2px solid #FFD700;padding:14px}
+.footer{max-width:1100px;margin:20px auto;text-align:center;border-top:2px solid #FFD700;padding:14px}
 .footer a{color:#FFD700;text-decoration:none;font-size:11px;margin:0 6px;font-weight:800}
+.fab-mini{position:fixed;bottom:20px;right:15px;z-index:99999;background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;width:60px;height:60px;border-radius:50%;border:2px solid #fff;display:none;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 12px rgba(0,0,0,.7);cursor:pointer}
 </style>
 </head>
 <body>
 <header>
-<h1>🗺️ MAPAS CURITIBA<br><span style="font-size:10px;color:#aaa">Busca + Rota + Salvos</span></h1>
-<div style="display:flex;gap:6px"><span class="tag">MAPAS GRÁTIS</span><a href="/" style="background:#222;color:#fff;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:900;text-decoration:none">✕ FECHAR</a></div>
+<h1>🗺️ MAPAS CURITIBA<br><span style="font-size:10px;color:#aaa">Busca + Rota + Salvos - Google Maps</span></h1>
+<div style="display:flex;gap:6px"><span class="tag">MAPAS GRÁTIS - OFFLINE</span><a href="/" style="background:#222;color:#fff;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:900;text-decoration:none">✕ FECHAR</a></div>
 </header>
 
 <div class="conteudo-editor">
-<h2>Mapas de Curitiba - Busque Qualquer Endereço Grátis</h2>
-<p>Precisa achar um endereço rápido em Curitiba? Digite shopping, hospital, UPA, bairro ou rua que mostramos no mapa e já abrimos no Google Maps com rota. Ideal pra quem tá sem crédito ou quer salvar lugares favoritos offline.</p>
-<p>Como usar: digite e clique BUSCAR NO MAPA. O local fica salvo automaticamente na sua lista abaixo pra você usar depois. Funciona no celular. Salve: bancogratidao.com.br/mapas/</p>
+<h2>Mapas de Curitiba - Busque Qualquer Endereço Grátis com Rota no Google Maps</h2>
+<p>Precisa achar um endereço rápido em Curitiba? Digite shopping, hospital, UPA, bairro ou rua que mostramos no mapa e já abrimos no Google Maps com rota. Ideal pra quem tá sem crédito ou quer salvar lugares favoritos offline no celular.</p>
+<p>Como usar: digite e clique BUSCAR NO MAPA, ou toque nos cards abaixo Centro, Shopping, Hospital, UPA 24H. O local fica salvo automaticamente na sua lista pra usar depois. Salve: bancogratidao.com.br/mapas/</p>
 </div>
 
-<div class="filters">
-<button class="active" onclick="buscarRapido('Centro Curitiba',this)">CENTRO</button>
-<button onclick="buscarRapido('Shopping Estação Curitiba',this)">SHOPPING</button>
-<button onclick="buscarRapido('Hospital Curitiba',this)">HOSPITAL</button>
-<button onclick="buscarRapido('UPA 24H Curitiba',this)">UPA 24H</button>
-<button onclick="buscarRapido('Tatuquara Curitiba',this)">TATUQUARA</button>
-<button onclick="buscarRapido('Boqueirão Curitiba',this)">BOQUEIRÃO</button>
-</div>
+<div class="alert">🗺️ DICA: Toque nos cards com foto abaixo ou digite na busca - Seus locais ficam salvos no celular mesmo sem internet - Rota direta no Google Maps</div>
 
-<div class="alert">🗺️ Dica: Toque em CENTRO, SHOPPING, HOSPITAL pra buscar rápido. Seus locais ficam salvos no celular mesmo sem internet.</div>
-
-<div class="ad-box"><small>PUBLICIDADE</small>
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2263470788888608" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<div class="busca-wrap">
+<input id="busca" placeholder="📍 Digite: Centro, Shopping Estação, Hospital, UPA, Boqueirão...">
+<button onclick="buscar()">🔍 BUSCAR NO MAPA</button>
 </div>
 
 <div class="box">
-<input id="busca" placeholder="📍 Digite: Centro, Shopping Estação, Hospital, Bairro...">
-<button class="btn-busca" onclick="buscar()">🔍 BUSCAR NO MAPA</button>
 <iframe id="mapa" src="https://www.openstreetmap.org/export/embed.html?bbox=-49.35%2C-25.5%2C-49.15%2C-25.35&layer=mapnik&marker=-25.4290%2C-49.2671" loading="lazy"></iframe>
 <div id="lista" style="margin-top:12px"></div>
-<button onclick="backup()" style="background:#222;color:#fff;margin-top:10px">💾 BACKUP LOCAIS SALVOS</button>
-<button onclick="resetar()" style="background:#500;color:#fff">🗑️ RESETAR TUDO</button>
-<a href="/" style="text-decoration:none"><button class="btn-voltar">◀️ VOLTAR PRO PORTAL DO POVO</button></a>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+<button onclick="backup()" style="background:#222;color:#fff;padding:12px;border-radius:12px;border:1px solid #333;font-weight:900;cursor:pointer">💾 BACKUP SALVOS</button>
+<button onclick="resetar()" style="background:#500;color:#fff;padding:12px;border-radius:12px;border:0;font-weight:900;cursor:pointer">🗑️ RESETAR</button>
+</div>
 </div>
 
-<div class="ad-box"><small>PUBLICIDADE - RODAPÉ</small>
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2263470788888608" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<div class="cat">📍 BUSCA RÁPIDA - CARDS COM FOTO - CURITIBA</div>
+<div class="grid">
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=600"><span class="badge b-yellow">CENTRO - CURITIBA - COMÉRCIO</span><span class="pulse">● MAIS BUSCADO</span></div><div class="card-body"><b>🏙️ CENTRO DE CURITIBA - MAPA E ROTA</b><span>Rua XV, Praça Tiradentes, Centro Cívico - Comércio, banco, ônibus</span><div class="end">📍 Centro, 80010 - Curitiba | 🕐 24H | 📍 Rota Google Maps</div><div class="btns"><a class="btn btn-hor" href="javascript:buscarRapido('Centro Curitiba')">🔍 BUSCAR CENTRO</a><a class="btn btn-map" href="https://www.google.com/maps/search/Centro+Curitiba/@-25.4290,-49.2671,14z" target="_blank">📍 GOOGLE MAPS</a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1519562575838-7d3c4e06da4a?q=80&w=600"><span class="badge b-blue">SHOPPING - ESTAÇÃO - MÜLLER - BARIGUI</span><span class="pulse">● SHOPPING</span></div><div class="card-body"><b>🛍️ SHOPPINGS CURITIBA - MAPA</b><span>Shopping Estação, Müller, Barigui, Palladium - Lojas, praça alimentação</span><div class="end">📍 Shopping Estação - Centro | 🕐 10h às 22h</div><div class="btns"><a class="btn btn-hor" href="javascript:buscarRapido('Shopping Estação Curitiba')">🔍 SHOPPING</a><a class="btn btn-map" href="https://www.google.com/maps/search/Shopping+Curitiba/@-25.4290,-49.2671,13z" target="_blank">📍 MAPA</a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600"><span class="badge b-red">HOSPITAL - UPA 24H - SAÚDE - SUS</span><span class="pulse">● 24H</span></div><div class="card-body"><b>🏥 HOSPITAIS E UPAs 24H - CURITIBA</b><span>Hospital do Trabalhador, Evangélico, UPA Boqueirão, Cajuru - Emergência</span><div class="end">📍 SAMU 192 | ☎️ 156 | 🕐 24H grátis SUS</div><div class="btns"><a class="btn btn-hor" href="javascript:buscarRapido('UPA 24H Curitiba')">🚨 UPA 24H</a><a class="btn btn-map" href="https://www.google.com/maps/search/Hospital+Curitiba/@-25.4290,-49.2671,13z" target="_blank">🏥 HOSPITAL</a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=600"><span class="badge b-green">BAIRRO TATUQUARA - SÍTIO CERCADO - SUL</span><span class="pulse">● SUL</span></div><div class="card-body"><b>🏘️ TATUQUARA / SÍTIO CERCADO - BAIRRO</b><span>Tatuquara, Sítio Cercado, Bairro Novo - Terminal, UPA, mercado</span><div class="end">📍 Região sul - Curitiba | 🚌 Terminal Sítio Cercado</div><div class="btns"><a class="btn btn-hor" href="javascript:buscarRapido('Tatuquara Curitiba')">🔍 TATUQUARA</a><a class="btn btn-map" href="https://www.google.com/maps/search/Tatuquara+Curitiba/@-25.60,-49.28,13z" target="_blank">📍 MAPA</a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1519003722824-194243704534?q=80&w=600"><span class="badge b-orange">BAIRRO BOQUEIRÃO - HAUER - ALTO BOQUEIRÃO</span><span class="pulse">● BOQUEIRÃO</span></div><div class="card-body"><b>🏘️ BOQUEIRÃO / HAUER - BAIRRO</b><span>Boqueirão, Hauer, Alto Boqueirão - Terminal Boqueirão, comércio</span><div class="end">📍 Região sudeste | 🚌 Terminal Boqueirão | 🕐 24H</div><div class="btns"><a class="btn btn-hor" href="javascript:buscarRapido('Boqueirão Curitiba')">🔍 BOQUEIRÃO</a><a class="btn btn-map" href="https://www.google.com/maps/search/Boqueirao+Curitiba/@-25.48,-49.24,13z" target="_blank">📍 MAPA</a></div></div></div>
+
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600"><span class="badge b-yellow">TERMINAIS - PINHEIRINHO - STA CÂNDIDA - CIC</span><span class="pulse">● TERMINAL</span></div><div class="card-body"><b>🏁 TERMINAIS DE ÔNIBUS - MAPA</b><span>Terminal Pinheirinho, Santa Cândida, Boqueirão, CIC, Capão Raso</span><div class="end">📍 URBS | 🕐 04h às 00h | 🚌 Linhas 303, 603, Inter 2</div><div class="btns"><a class="btn btn-hor" href="javascript:buscarRapido('Terminal Pinheirinho Curitiba')">🏁 TERMINAL</a><a class="btn btn-map" href="/onibus/">🚌 ÔNIBUS</a></div></div></div>
+
+</div>
+
+<div style="text-align:center;padding:12px">
+<a href="/" style="display:inline-block;background:#111;color:#FFD700;border:1px solid #FFD700;padding:12px 20px;border-radius:12px;font-weight:900;text-decoration:none">⬅️ VOLTAR PRO PORTAL DO POVO</a>
 </div>
 
 <footer class="footer">
 <a href="/">🏠 PORTAL</a>
 <a href="/privacidade/">🔒 PRIVACIDADE</a>
 <a href="/contato/">📞 CONTATO</a>
-<p style="color:#888;font-size:10px;margin-top:8px">Mapas OpenStreetMap + Google Maps - Locais salvos no seu celular.</p>
+<p style="color:#888;font-size:10px;margin-top:8px">Mapas OpenStreetMap + Google Maps - Locais salvos no seu celular - Banco Gratidão 2026</p>
 </footer>
 
 <script>
 let locais=JSON.parse(localStorage.getItem('mapas_portal')||'[]');
-function render(){let l=document.getElementById('lista');l.innerHTML=locais.length?`<b style="color:#FFD700;font-size:12px">📍 LOCAIS SALVOS (${locais.length})</b>`:'';locais.forEach((loc,i)=>{l.innerHTML+=`<div class="item"><span style="font-size:12px">📍 ${loc}</span><button class="lixeira" onclick="apagar(${i})">🗑️</button></div>`});localStorage.setItem('mapas_portal',JSON.stringify(locais))}
-function buscar(){let q=document.getElementById('busca').value.trim();if(!q)return alert('Digite um lugar');locais.unshift(q);locais=[...new Set(locais)].slice(0,30);document.getElementById('mapa').src=`https://www.openstreetmap.org/export/embed.html?q=${encodeURIComponent(q)}&bbox=-49.35,-25.5,-49.15,-25.35&layer=mapnik&marker=-25.429,-49.2671`;window.open(`https://www.google.com/maps/search/${encodeURIComponent(q)}/@-25.4290,-49.2671,13z`,'_blank');render()}
-function buscarRapido(q,el){document.getElementById('busca').value=q;document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));if(el)el.classList.add('active');buscar()}
+function render(){let l=document.getElementById('lista');l.innerHTML=locais.length?`<b style="color:#FFD700;font-size:12px">📍 LOCAIS SALVOS (${locais.length}) - Toque para buscar</b>`:'';locais.forEach((loc,i)=>{l.innerHTML+=`<div class="item"><span style="font-size:12px;cursor:pointer" onclick="buscarRapido('${loc.replace(/'/g,"\\'")}')">📍 ${loc}</span><button class="lixeira" onclick="apagar(${i})">🗑️</button></div>`});localStorage.setItem('mapas_portal',JSON.stringify(locais))}
+function buscar(){let q=document.getElementById('busca').value.trim();if(!q)return alert('Digite um lugar');locais.unshift(q);locais=[...new Set(locais)].slice(0,30);document.getElementById('mapa').src=`https://www.openstreetmap.org/export/embed.html?q=${encodeURIComponent(q)}&bbox=-49.35,-25.5,-49.15,-25.35&layer=mapnik`;window.open(`https://www.google.com/maps/search/${encodeURIComponent(q)}/@-25.4290,-49.2671,13z`,'_blank');render()}
+function buscarRapido(q){document.getElementById('busca').value=q;let qq=q.trim();if(!qq)return;locais.unshift(qq);locais=[...new Set(locais)].slice(0,30);document.getElementById('mapa').src=`https://www.openstreetmap.org/export/embed.html?q=${encodeURIComponent(qq)}&bbox=-49.35,-25.5,-49.15,-25.35&layer=mapnik`;window.open(`https://www.google.com/maps/search/${encodeURIComponent(qq)}/@-25.4290,-49.2671,13z`,'_blank');render();window.scrollTo({top:200,behavior:'smooth'})}
 function apagar(i){locais.splice(i,1);render()}
 function backup(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(locais,null,2)],{type:'application/json'}));a.download='backup_mapas_portal_do_povo.json';a.click()}
 function resetar(){if(confirm('Apagar todos os locais salvos?')){locais=[];render()}}render();
@@ -97,12 +116,12 @@ function resetar(){if(confirm('Apagar todos os locais salvos?')){locais=[];rende
 <div id="btnChamarPortal"><div><b>🔴 PORTAL DO POVO</b></div><a class="abrir" href="/">ABRIR</a><span class="fechar" onclick="this.parentElement.style.display='none'">✕</span></div>
 
 <link rel="manifest" href="./manifest.json">
-<button class="fab-mini" id="fabMini" style="position:fixed;bottom:20px;right:15px;z-index:99999;background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;width:60px;height:60px;border-radius:50%;border:2px solid #fff;display:none;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 12px rgba(0,0,0,.7);cursor:pointer">⬇️</button>
+<button class="fab-mini" id="fabMini" style="display:none">⬇️</button>
 <script>
 let dpMini=null;
 window.addEventListener('beforeinstallprompt', e=>{e.preventDefault();dpMini=e;document.getElementById('fabMini').style.display='flex';});
 document.getElementById('fabMini').addEventListener('click', async()=>{ if(!dpMini) return; dpMini.prompt(); const o=await dpMini.userChoice; if(o.outcome==='accepted') document.getElementById('fabMini').style.display='none'; dpMini=null; });
-if('serviceWorker' in navigator){ navigator.serviceWorker.register('../sw.js'); }
+if('serviceWorker' in navigator){ navigator.serviceWorker.register('./sw.js'); }
 </script>
 </body>
 </html>
