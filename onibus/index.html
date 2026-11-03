@@ -5,98 +5,123 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- ADSENSE AUTOMÁTICO - ÚNICO - PADRÃO -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263470788888608" crossorigin="anonymous"></script>
-<title>🚌 Ônibus - Portal do Povo - Horário, Itinerário, Onde Está Meu Ônibus</title>
-<meta name="description" content="Ônibus Portal do Povo Curitiba: consulte horário por linha, itinerário, onde está meu ônibus ao vivo, cartão URBS, app Curitiba 156, reclamação 156. Linhas 303, 603, 304, Inter 2.">
+<title>🚌 Ônibus Curitiba - Horário, Linhas, Terminais, Onde Está Meu Ônibus Ao Vivo - URBS 156</title>
+<meta name="description" content="Ônibus Curitiba: horário por linha 303 603 304 Inter 2 203, itinerário, onde está meu ônibus ao vivo URBS, terminais Pinheirinho Boqueirão Santa Cândida CIC, cartão URBS, app Curitiba 156, reclamação 156.">
 <link rel="canonical" href="https://bancogratidao.com.br/onibus/">
 <meta name="theme-color" content="#FFD700">
-<link rel="manifest" href="./manifest.json">
 <link rel="icon" href="../icon.png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
 body{background:#050505;color:#fff;padding-bottom:90px}
-header{position:sticky;top:0;z-index:99;background:#000;padding:10px 12px;border-bottom:3px solid #FFD700;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:99;background:#000;border-bottom:3px solid #FFD700;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
 .tag{font-size:9px;font-weight:900;background:#FFD700;color:#000;padding:5px 10px;border-radius:20px}
 .conteudo-editor{background:#111;border:1px solid #FFD700;border-radius:12px;padding:12px;margin:10px}
 .conteudo-editor h2{font-size:13px;color:#FFD700;margin:0 0 6px}
 .conteudo-editor p{font-size:11px;line-height:16px;color:#ccc;margin:0 0 6px}
-.alert{background:#1a1500;border:1px solid #FFD700;border-radius:12px;padding:12px;margin:10px;font-size:11px;color:#ffeeaa}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
-@media(max-width:600px){.grid{grid-template-columns:1fr}}
-.card{background:#111;border:1px solid #222;border-radius:14px;padding:14px}
-.card .top{display:flex;gap:12px;align-items:center}
-.card .icon{font-size:28px}
-.card b{font-size:13px;color:#fff}
-.card span{font-size:11px;color:#888;display:block;margin-top:2px}
-.btn{display:inline-block;margin-top:10px;background:#FFD700;color:#000;padding:9px 14px;border-radius:20px;font-weight:900;font-size:11px;text-decoration:none}
-.btn2{background:#222;color:#fff;border:1px solid #333}
-.titulo{padding:14px 10px 4px;color:#FFD700;font-size:13px;font-weight:900}
-.alerta{background:#111;border:1px solid #FFD700;border-radius:12px;margin:10px;padding:14px;text-align:center}
-.busca{margin:10px;background:#111;border:1px solid #333;border-radius:12px;padding:10px;display:flex;gap:8px}
-.busca input{flex:1;background:#000;border:1px solid #333;color:#fff;padding:12px;border-radius:10px}
+.alert{background:#1a1500;border:1px solid #FFD700;border-radius:12px;padding:12px;margin:10px;font-size:11px;color:#ffeeaa;text-align:center}
+.busca-wrap{margin:10px;background:#111;border:2px solid #FFD700;border-radius:14px;padding:10px;display:flex;gap:8px;position:sticky;top:60px;z-index:98}
+.busca-wrap input{flex:1;background:#000;border:1px solid #333;color:#fff;padding:14px;border-radius:12px;font-size:13px;font-weight:700}
+.busca-wrap button{background:#FFD700;color:#000;border:0;padding:12px 16px;border-radius:12px;font-weight:900;font-size:12px;cursor:pointer}
+.cat{background:#111;border-left:4px solid #FFD700;margin:16px 10px 8px;padding:10px 14px;border-radius:10px;font-weight:900;color:#FFD700;font-size:12px}
+.grid{padding:10px;display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
+.card{background:#151515;border:1.5px solid #222;border-radius:18px;overflow:hidden;position:relative}
+.card:hover{border-color:#FFD700}
+.card-img{height:150px;position:relative;background:#222;overflow:hidden}.card-img img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.75)}
+.badge{position:absolute;top:10px;left:10px;padding:6px 10px;border-radius:20px;font-size:8px;font-weight:900;color:#fff;z-index:2}
+.b-yellow{background:#FFD700;color:#000}.b-blue{background:#0094ff}.b-green{background:#00a859}.b-red{background:#ff0000}.b-orange{background:#ff6a00}
+.pulse{position:absolute;top:10px;right:10px;background:#000;color:#FFD700;border:1px solid #FFD700;padding:5px 10px;border-radius:20px;font-size:8px;font-weight:900;z-index:2}
+.card-body{padding:12px}
+.card-body b{font-size:13px;color:#FFD700;display:block;line-height:15px}
+.card-body span{font-size:11px;color:#aaa;display:block;line-height:15px;margin-top:4px}
+.card-body .end{font-size:11px;color:#fff;margin-top:8px;background:#0a0a0a;padding:9px;border-radius:10px;border-left:3px solid #FFD700}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}
+.btn{padding:11px 4px;border-radius:12px;font-size:11px;font-weight:900;text-align:center;text-decoration:none;display:block}
+.btn-hor{background:#FFD700;color:#000}.btn-map{background:#fff;color:#000}.btn-site{background:#111;color:#fff;border:1px solid #333}
 .footer{max-width:1100px;margin:20px auto;text-align:center;border-top:2px solid #FFD700;padding:14px}
 .footer a{color:#FFD700;text-decoration:none;font-size:11px;margin:0 6px;font-weight:800}
-.fab-mini{position:fixed;bottom:20px;right:15px;z-index:99999;background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;width:62px;height:62px;border-radius:50%;border:2px solid #fff;display:none;align-items:center;justify-content:center;font-size:28px;box-shadow:0 4px 12px rgba(0,0,0,.8);cursor:pointer}
+.fab-mini{position:fixed;bottom:20px;right:15px;z-index:99999;background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;width:60px;height:60px;border-radius:50%;border:2px solid #fff;display:none;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 12px rgba(0,0,0,.7);cursor:pointer}
 </style>
 </head>
 <body>
-
 <header>
-<div style="display:flex;align-items:center;gap:10px"><a href="/" style="text-decoration:none;color:#fff;font-size:20px;font-weight:900">←</a><b style="color:#FFD700;font-size:14px">🚌 ÔNIBUS - PORTAL DO POVO</b><span class="tag">CURITIBA AO VIVO</span></div>
-<div style="display:flex;gap:6px"><a href="/" style="background:#222;color:#fff;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:900;text-decoration:none">✕ FECHAR</a></div>
+<div style="display:flex;align-items:center;gap:8px"><a href="/" style="text-decoration:none;color:#fff;font-size:20px;font-weight:900">←</a><div><div style="font-weight:900;color:#FFD700;font-size:14px">🚌 ÔNIBUS CURITIBA - AO VIVO URBS</div><div style="font-size:10px;color:#aaa">Horário, Linhas, Terminais, Onde Está Meu Ônibus</div></div></div>
+<div style="display:flex;gap:6px"><span class="tag">URBS OFICIAL + 156</span><a href="/" style="background:#222;color:#fff;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:900;text-decoration:none">✕ FECHAR</a></div>
 </header>
 
 <div class="conteudo-editor">
-<h2>Ônibus Portal do Povo - Horário, Itinerário e Onde Está Meu Ônibus em Tempo Real Curitiba</h2>
-<p>Perdeu o ônibus ou quer saber onde ele está? O Portal do Ônibus do Banco Gratidão é grátis: consulte horário por linha, veja itinerário por onde passa, saldo cartão URBS, app oficial Curitiba 156 com horário no celular e reclamação URBS no 156.</p>
-<p>Como usar: digite número da linha ex: 303, 603, 304, Inter 2 no buscar, ou toque em consultar horário, ver mapa, URBS ou app. Linhas mais usadas: Santa Cândida, Pinheirinho, Boqueirão, Interbairros II, Expresso 203. Tudo direto no site da URBS oficial. Salve: bancogratidao.com.br/onibus/</p>
+<h2>Ônibus Curitiba - Horário por Linha, Onde Está Meu Ônibus Ao Vivo, Terminais e Itinerário URBS Oficial</h2>
+<p>Perdeu o ônibus? Consulte horário oficial URBS por linha 303 Sta Cândida, 603 Pinheirinho, 304 Boqueirão, Inter 2 Interbairros, 203 Expresso, veja onde está meu ônibus ao vivo no mapa, itinerário completo por onde passa e todos terminais: Pinheirinho, Boqueirão, Santa Cândida, CIC, Sítio Cercado, Campo Comprido, Capão Raso, Portão.</p>
+<p>Como usar: digite o número da linha na busca abaixo ex: 303, 603, Inter 2, ou toque em VER HORÁRIO. Saldo cartão URBS, recarga, app oficial Curitiba 156 com ônibus ao vivo e reclamação ligue 156. Salve: bancogratidao.com.br/onibus/</p>
 </div>
 
-<div class="alert">📍 DICA: Busque sua linha acima e toque em VER HORÁRIO. Baixe app Curitiba 156 pra ver ônibus ao vivo no mapa e fazer reclamação no 156 se atrasar.</div>
+<div class="alert">📍 DIGITE SUA LINHA NA BUSCA ABAIXO - Ex: 303, 603, 304, Inter 2, 203 - E TOQUE EM VER HORÁRIO OFICIAL URBS - AO VIVO</div>
 
-<div class="alerta">
-<b style="color:#FFD700;font-size:13px">📍 ONDE ESTÁ MEU ÔNIBUS? AO VIVO</b><br>
-<span style="font-size:11px;color:#aaa">Veja em tempo real no mapa da URBS oficial</span><br>
-<a class="btn" href="https://urbs.curitiba.pr.gov.br/horario/" target="_blank" style="margin-top:10px">🚌 VER ÔNIBUS AO VIVO AGORA</a>
+<div class="busca-wrap">
+<input id="buscaLinha" placeholder="🔍 Digite linha: 303, 603, 304, Inter 2, 203, Pinheirinho, Boqueirão..." oninput="filtrarLinha()">
+<button onclick="filtrarLinha()">🔍 BUSCAR</button>
 </div>
 
-<div class="busca">
-<input id="buscaLinha" placeholder="Digite o número da linha ex: 303, 603, Inter 2..." oninput="filtrarLinha()">
-<button class="btn btn2" onclick="filtrarLinha()" style="margin:0">🔍 BUSCAR LINHA</button>
-</div>
-
-<div class="titulo">🕐 HORÁRIOS E LINHAS - URBS OFICIAL</div>
 <div class="grid">
-<div class="card"><div class="top"><div class="icon">🔍</div><div><b>CONSULTAR HORÁRIO POR LINHA</b><span>Digite número da linha - URBS</span></div></div><a class="btn" href="https://urbs.curitiba.pr.gov.br/horario/" target="_blank">CONSULTAR HORÁRIO</a></div>
-<div class="card"><div class="top"><div class="icon">🗺️</div><div><b>ITINERÁRIOS - POR ONDE PASSA</b><span>Veja todas as paradas no mapa</span></div></div><a class="btn btn2" href="https://urbs.curitiba.pr.gov.br/horario/" target="_blank">VER MAPA ITINERÁRIO</a></div>
-<div class="card"><div class="top"><div class="icon">💳</div><div><b>CARTÃO URBS / CRÉDITO / SALDO</b><span>Saldo, recarga, 2ª via cartão</span></div></div><a class="btn btn2" href="https://www.urbs.curitiba.pr.gov.br/" target="_blank">VER CARTÃO URBS</a></div>
-<div class="card"><div class="top"><div class="icon">♿</div><div><b>ÔNIBUS ACESSO / LIGEIRINHO</b><span>Ligeirinho, Interbairros, Biarticulado</span></div></div><a class="btn btn2" href="https://urbs.curitiba.pr.gov.br/horario/" target="_blank">VER LINHAS</a></div>
+<div class="card" style="border-color:#FFD700;grid-column:1/-1">
+<div class="card-img"><img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800"><span class="badge b-yellow">AO VIVO - URBS OFICIAL - MAPA</span><span class="pulse">● AO VIVO</span></div>
+<div class="card-body">
+<b>📍 ONDE ESTÁ MEU ÔNIBUS? AO VIVO - URBS - MAPA</b>
+<span>Veja em tempo real onde seu ônibus está no mapa oficial URBS - Todas as linhas de Curitiba</span>
+<div class="end">🕐 Atualização ao vivo | 💳 Cartão URBS | 📱 App Curitiba 156 | ☎️ Reclamação 156</div>
+<div class="btns"><a class="btn btn-hor" href="https://urbs.curitiba.pr.gov.br/horario/" target="_blank">🚌 VER AO VIVO AGORA</a><a class="btn btn-map" href="https://www.urbs.curitiba.pr.gov.br/" target="_blank">💳 CARTÃO URBS</a></div>
+</div>
+</div>
 </div>
 
-<div class="titulo">📱 APP RECOMENDADO - OFICIAL PREFEITURA</div>
-<div class="grid">
-<div class="card"><div class="top"><div class="icon">📱</div><div><b>APP CURITIBA 156 - HORÁRIO ÔNIBUS</b><span>Horário no celular - Oficial Prefeitura Curitiba - Ao vivo</span></div></div><a class="btn" href="https://play.google.com/store/search?q=curitiba%20156&c=apps" target="_blank">📲 BAIXAR APP 156</a></div>
-<div class="card"><div class="top"><div class="icon">🚨</div><div><b>RECLAMAÇÃO URBS - LIGAR 156</b><span>Ônibus atrasado, lotado, reclamação, sugestão</span></div></div><a class="btn btn2" href="tel:156">📞 LIGAR 156 AGORA</a></div>
-</div>
-
-<div class="titulo">⭐ LINHAS MAIS USADAS - CURITIBA</div>
+<div class="cat">⭐ LINHAS MAIS USADAS - HORÁRIO OFICIAL - CURITIBA</div>
 <div class="grid" id="gridLinhas">
-<div class="card linha"><div class="top"><div class="icon">🚌</div><div><b>STA CÂNDIDA / CABRAL / CENTRO</b><span>Ligeirão - 303 - Biarticulado - Santa Cândida</span></div></div><a class="btn btn2" href="https://urbs.curitiba.pr.gov.br/horario/?linha=303" target="_blank">VER HORÁRIO 303</a></div>
-<div class="card linha"><div class="top"><div class="icon">🚌</div><div><b>PINHEIRINHO / CENTRO - DIRETO</b><span>603 - Ligeirinho Direto - Pinheirinho</span></div></div><a class="btn btn2" href="https://urbs.curitiba.pr.gov.br/horario/?linha=603" target="_blank">VER HORÁRIO 603</a></div>
-<div class="card linha"><div class="top"><div class="icon">🚌</div><div><b>BOQUEIRÃO / CENTRO</b><span>304 - Circular - Boqueirão</span></div></div><a class="btn btn2" href="https://urbs.curitiba.pr.gov.br/horario/?linha=304" target="_blank">VER HORÁRIO 304</a></div>
-<div class="card linha"><div class="top"><div class="icon">🚌</div><div><b>INTERBAIRROS II - HORÁRIO 24H</b><span>Inter 2 - Circular - 24 horas</span></div></div><a class="btn btn2" href="https://urbs.curitiba.pr.gov.br/horario/?linha=Inter2" target="_blank">VER HORÁRIO INTER 2</a></div>
-<div class="card linha"><div class="top"><div class="icon">🚌</div><div><b>SANTA CÂNDIDA / CAPÃO RASO</b><span>203 - Expresso - Santa Cândida</span></div></div><a class="btn btn2" href="https://urbs.curitiba.pr.gov.br/horario/?linha=203" target="_blank">VER HORÁRIO 203</a></div>
-<div class="card linha"><div class="top"><div class="icon">🚌</div><div><b>TUBO / LIGEIRINHO - PARADAS RÁPIDAS</b><span>Paradas rápidas - Ligeirinho</span></div></div><a class="btn btn2" href="https://urbs.curitiba.pr.gov.br/horario/" target="_blank">VER TODAS LINHAS</a></div>
+
+<div class="card linha"><div class="card-img"><img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=800"><span class="badge b-blue">LINHA 303 - LIGEIRÃO - STA CÂNDIDA / CABRAL / CENTRO</span><span class="pulse">● BIARTICULADO</span></div><div class="card-body"><b>🚌 303 - SANTA CÂNDIDA / CABRAL / CENTRO - LIGEIRÃO</b><span>Biarticulado - Santa Cândida, Cabral, Centro - Via rápida</span><div class="end">📍 Terminal Santa Cândida - Cabral - Centro | 🕐 04h às 00h | ♿ Acessível</div><div class="btns"><a class="btn btn-hor" href="https://urbs.curitiba.pr.gov.br/horario/?linha=303" target="_blank">🕐 VER HORÁRIO 303</a><a class="btn btn-map" href="https://www.google.com/maps/search/Terminal+Santa+Candida+Curitiba" target="_blank">📍 TERMINAL</a></div></div></div>
+
+<div class="card linha"><div class="card-img"><img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=800"><span class="badge b-green">LINHA 603 - PINHEIRINHO / CENTRO - DIRETO - LIGEIRINHO</span><span class="pulse">● DIRETO</span></div><div class="card-body"><b>🚌 603 - PINHEIRINHO / CENTRO - DIRETO - LIGEIRINHO</b><span>Ligeirinho direto - Pinheirinho, Capão Raso, Centro - Rápido</span><div class="end">📍 Terminal Pinheirinho - Capão Raso - Centro | 🕐 04h30 às 23h30</div><div class="btns"><a class="btn btn-hor" href="https://urbs.curitiba.pr.gov.br/horario/?linha=603" target="_blank">🕐 VER HORÁRIO 603</a><a class="btn btn-map" href="https://www.google.com/maps/search/Terminal+Pinheirinho+Curitiba" target="_blank">📍 TERMINAL</a></div></div></div>
+
+<div class="card linha"><div class="card-img"><img src="https://images.unsplash.com/photo-1519003722824-194243704534?q=80&w=800"><span class="badge b-yellow">LINHA 304 - BOQUEIRÃO / CENTRO - CIRCULAR</span><span class="pulse">● CIRCULAR</span></div><div class="card-body"><b>🚌 304 - BOQUEIRÃO / CENTRO - CIRCULAR</b><span>Circular - Boqueirão, Hauer, Centro - Via Av. Marechal</span><div class="end">📍 Terminal Boqueirão - Centro | 🕐 05h às 23h</div><div class="btns"><a class="btn btn-hor" href="https://urbs.curitiba.pr.gov.br/horario/?linha=304" target="_blank">🕐 VER HORÁRIO 304</a><a class="btn btn-map" href="https://www.google.com/maps/search/Terminal+Boqueirao+Curitiba" target="_blank">📍 TERMINAL</a></div></div></div>
+
+<div class="card linha"><div class="card-img"><img src="https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?q=80&w=800"><span class="badge b-red">LINHA INTER 2 - INTERBAIRROS II - 24 HORAS - CIRCULAR</span><span class="pulse">● 24H</span></div><div class="card-body"><b>🚌 INTER 2 - INTERBAIRROS II - 24 HORAS - CIRCULAR</b><span>Interbairros II - Circular 24h - Liga todos os terminais - Mais usada</span><div class="end">📍 Todos terminais - Pinheirinho - Boqueirão - Cabral - CIC | 🕐 24 HORAS</div><div class="btns"><a class="btn btn-hor" href="https://urbs.curitiba.pr.gov.br/horario/?linha=Inter2" target="_blank">🕐 VER HORÁRIO INTER 2</a><a class="btn btn-site" href="https://urbs.curitiba.pr.gov.br/horario/" target="_blank">ITINERÁRIO</a></div></div></div>
+
+<div class="card linha"><div class="card-img"><img src="https://images.unsplash.com/photo-1570125909517-53cb2d40e98d?q=80&w=800"><span class="badge b-blue">LINHA 203 - SANTA CÂNDIDA / CAPÃO RASO - EXPRESSO</span><span class="pulse">● EXPRESSO</span></div><div class="card-body"><b>🚌 203 - SANTA CÂNDIDA / CAPÃO RASO - EXPRESSO</b><span>Expresso - Santa Cândida - Centro - Capão Raso - Pinheirinho</span><div class="end">📍 Sta Cândida - Centro - Capão Raso | 🕐 04h30 às 00h</div><div class="btns"><a class="btn btn-hor" href="https://urbs.curitiba.pr.gov.br/horario/?linha=203" target="_blank">🕐 VER HORÁRIO 203</a><a class="btn btn-map" href="https://www.google.com/maps/search/Terminal+Capao+Raso+Curitiba" target="_blank">📍 MAPA</a></div></div></div>
+
+<div class="card linha"><div class="card-img"><img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=600"><span class="badge b-orange">LINHA 502 - BOQUEIRÃO / CENTRO CÍVICO - LIGEIRINHO</span><span class="pulse">● LIGEIRINHO</span></div><div class="card-body"><b>🚌 502 - BOQUEIRÃO / CENTRO CÍVICO - LIGEIRINHO</b><span>Ligeirinho - Boqueirão - Centro Cívico</span><div class="end">📍 Terminal Boqueirão - Centro Cívico | 🕐 05h às 22h30</div><div class="btns"><a class="btn btn-hor" href="https://urbs.curitiba.pr.gov.br/horario/?linha=502" target="_blank">🕐 HORÁRIO 502</a><a class="btn btn-map" href="https://urbs.curitiba.pr.gov.br/horario/" target="_blank">TODAS LINHAS</a></div></div></div>
+
+</div>
+
+<div class="cat">🏁 TERMINAIS DE ÔNIBUS - CURITIBA - TODOS - HORÁRIO E MAPA</div>
+<div class="grid" id="gridTerminais">
+
+<div class="card linha"><div class="card-img"><img src="https://images.unsplash.com/photo-1557222213-3d0c22a0a1f3?q=80&w=800"><span class="badge b-yellow">TERMINAL PINHEIRINHO</span><span class="pulse">● SUL</span></div><div class="card-body"><b>🏁 TERMINAL PINHEIRINHO</b><span>Principal da região sul - Linhas para Centro, CIC, Sítio Cercado, Tatuquara</span><div class="end">📍 R. Winston Churchill - Pinheirinho | 🕐 04h às 00h | 15 linhas</div><div class="btns"><a class="btn btn-hor" href="https://urbs.curitiba.pr.gov.br/horario/" target="_blank">VER LINHAS</a><a class="btn btn-map" href="https://www.google.com/maps/search/Terminal+Pinheirinho+Curitiba" target="_blank">📍 MAPA</a></div></div></div>
+
+<div class="card linha"><div class="card-img"><img src="https://images.unsplash.com/photo-1519003722824-194243704534?q=80&w=800"><span class="badge b-blue">TERMINAL BOQUEIRÃO</span><span class="pulse">● BOQUEIRÃO</span></div><div class="card-body"><b>🏁 TERMINAL BOQUEIRÃO</b><span>Boqueirão, Hauer, Alto Boqueirão - Inter 2, 304, 502</span><div class="end">📍 Av. Mal. Floriano - Boqueirão | 🕐 04h30 às 23h30</div><div class="btns"><a class="btn btn-hor" href="https://urbs.curitiba.pr.gov.br/horario/" target="_blank">VER LINHAS</a><a class="btn btn-map" href="https://www.google.com/maps/search/Terminal+Boqueirao+Curitiba" target="_blank">📍 MAPA</a></div></div></div>
+
+<div class="card linha"><div class="card-img"><img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800"><span class="badge b-green">TERMINAL SANTA CÂNDIDA</span><span class="pulse">● NORTE</span></div><div class="card-body"><b>🏁 TERMINAL SANTA CÂNDIDA</b><span>Norte - Santa Cândida, Tingui, Bacacheri - Linhas 303, 203, Inter 2</span><div class="end">📍 Av. Paraná - Santa Cândida | 🕐 04h às 00h</div><div class="btns"><a class="btn btn-hor" href="https://urbs.curitiba.pr.gov.br/horario/" target="_blank">VER LINHAS</a><a class="btn btn-map" href="https://www.google.com/maps/search/Terminal+Santa+Candida+Curitiba" target="_blank">📍 MAPA</a></div></div></div>
+
+<div class="card linha"><div class="card-img"><img src="https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?q=80&w=800"><span class="badge b-red">TERMINAL CIC - CIDADE INDUSTRIAL</span><span class="pulse">● OESTE</span></div><div class="card-body"><b>🏁 TERMINAL CIC - CIDADE INDUSTRIAL</b><span>CIC, Augusta, Fazendinha, Campo Comprido - Oeste</span><div class="end">📍 R. Sen. Accioly Filho - CIC | 🕐 04h30 às 23h30</div><div class="btns"><a class="btn btn-hor" href="https://urbs.curitiba.pr.gov.br/horario/" target="_blank">VER LINHAS</a><a class="btn btn-map" href="https://www.google.com/maps/search/Terminal+CIC+Curitiba" target="_blank">📍 MAPA</a></div></div></div>
+
+<div class="card linha"><div class="card-img"><img src="https://images.unsplash.com/photo-1519003722824-194243704534?q=80&w=600"><span class="badge b-orange">TERMINAL SÍTIO CERCADO</span><span class="pulse">● BAIRRO NOVO</span></div><div class="card-body"><b>🏁 TERMINAL SÍTIO CERCADO</b><span>Sítio Cercado, Bairro Novo, Tatuquara - Sul</span><div class="end">📍 R. Izaac F. da Cruz - Sítio Cercado | 🕐 04h30 às 23h</div><div class="btns"><a class="btn btn-hor" href="https://urbs.curitiba.pr.gov.br/horario/" target="_blank">VER LINHAS</a><a class="btn btn-map" href="https://www.google.com/maps/search/Terminal+Sitio+Cercado+Curitiba" target="_blank">📍 MAPA</a></div></div></div>
+
+<div class="card linha"><div class="card-img"><img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=800"><span class="badge b-yellow">TERMINAL CAPÃO RASO</span><span class="pulse">● SUL</span></div><div class="card-body"><b>🏁 TERMINAL CAPÃO RASO</b><span>Capão Raso, Pinheirinho, Tatuquara - Conexão 203, 603</span><div class="end">📍 Av. Winston Churchill - Capão Raso | 🕐 04h30 às 23h30</div><div class="btns"><a class="btn btn-hor" href="https://urbs.curitiba.pr.gov.br/horario/" target="_blank">VER LINHAS</a><a class="btn btn-map" href="https://www.google.com/maps/search/Terminal+Capao+Raso+Curitiba" target="_blank">📍 MAPA</a></div></div></div>
+
+</div>
+
+<div class="cat">💳 CARTÃO URBS E APP - CURITIBA 156</div>
+<div class="grid">
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600"><span class="badge b-blue">CARTÃO URBS - SALDO, RECARGA, 2ª VIA</span></div><div class="card-body"><b>💳 CARTÃO URBS - SALDO E RECARGA - OFICIAL</b><span>Consulte saldo, recarga online, 2ª via, cartão estudante, idoso - Site oficial URBS</span><div class="end">📍 urbs.curitiba.pr.gov.br | 🕐 24H online | ☎️ 156</div><div class="btns"><a class="btn btn-hor" href="https://www.urbs.curitiba.pr.gov.br/" target="_blank">VER CARTÃO URBS</a><a class="btn btn-map" href="https://www.urbs.curitiba.pr.gov.br/" target="_blank">RECARGA</a></div></div></div>
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=600"><span class="badge b-green">APP CURITIBA 156 - HORÁRIO AO VIVO - OFICIAL</span></div><div class="card-body"><b>📱 APP CURITIBA 156 - HORÁRIO ÔNIBUS AO VIVO</b><span>Baixe app oficial Prefeitura Curitiba - Veja ônibus ao vivo no mapa, faça reclamação 156</span><div class="end">📱 Android e iPhone | 🕐 Ao vivo | ☎️ 156 reclamação</div><div class="btns"><a class="btn btn-hor" href="https://play.google.com/store/search?q=curitiba%20156&c=apps" target="_blank">📲 BAIXAR APP 156</a><a class="btn btn-site" href="tel:156">📞 LIGAR 156</a></div></div></div>
 </div>
 
 <div style="text-align:center;padding:12px">
-<a href="/" style="display:inline-block;background:#111;color:#FFD700;border:1px solid #FFD700;padding:12px 20px;border-radius:12px;font-weight:900;text-decoration:none">⬅️ VOLTAR PRO PORTAL DO POVO</a>
+<a href="/" style="display:inline-block;background:#111;color:#FFD700;border:1px solid #FFD700;padding:12px 20px;border-radius:12px;font-weight:900;text-decoration:none">⬅️ VOLTAR AO PORTAL DO POVO</a>
 </div>
 
 <footer class="footer">
 <a href="/">🏠 PORTAL</a>
 <a href="/privacidade/">🔒 PRIVACIDADE</a>
 <a href="/contato/">📞 CONTATO</a>
-<p style="color:#888;font-size:10px;margin-top:8px">Ônibus Curitiba - Horário URBS oficial - Itinerário - App 156 - Reclamação 156 - Portal do Povo</p>
+<p style="color:#888;font-size:10px;margin-top:8px">Ônibus Curitiba - Horário URBS oficial - Onde está meu ônibus ao vivo - Terminais Pinheirinho Boqueirão Santa Cândida CIC - App 156 - Banco Gratidão 2026</p>
 </footer>
 
 <button class="fab-mini" id="fabMini" title="Instalar Ônibus">⬇️</button>
@@ -107,7 +132,8 @@ header{position:sticky;top:0;z-index:99;background:#000;padding:10px 12px;border
 function filtrarLinha(){
   let q=document.getElementById('buscaLinha').value.toLowerCase();
   document.querySelectorAll('.linha').forEach(c=>{
-    c.style.display = c.innerText.toLowerCase().includes(q) ? 'block' : 'none';
+    let txt=c.innerText.toLowerCase();
+    c.style.display = txt.includes(q) ? 'block' : 'none';
   });
 }
 let dpMini=null;
