@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- ADSENSE AUTOMÁTICO - ÚNICO - PADRÃO -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2263470788888608" crossorigin="anonymous"></script>
 <title>Portal do Povo - Araucária PR - 70 Serviços</title>
 <meta name="theme-color" content="#FFD700">
@@ -42,9 +43,9 @@ h1{font-size:15px;color:#FFD700}h1 span{font-size:10px;color:#aaa;display:block}
 </footer>
 
 <script>
-// TODAS AS SUAS PASTAS QUE APARECEM NO PRINT
+// TODAS AS SUAS PASTAS QUE APARECEM NO PRINT - CORRIGIDO CEASA
 const pastas = [
-"Animais-ong-hospital","academias","advogados-24h","agua-gaz","auto-escolas","acougues","cartorios","casa-festas","cesa","celulares","chaveiro-24h","classificados","clinicas-reabilitacao","construcao","contabilidades","contadores","cras-creas","cursos","delegacias","eletricas","eletricista-24h","emergencias","empregos","encanador","escolas","esteticas","faculdades","farmacias-24h","floriculturas","funerarias","gaz-agua","graficas","hospitais","hoteis-moteis","imobiliarias","imoveis","informatica","lotericas","moto-taxi","oficinas-24h","onibus","orgaos-publicos","otica","padarias","pet-shop24h","postos-saude","saude","tatuagens","taxi","variedades","veterinarios-24h","vidracarias"
+"Animais-ong-hospital","academias","advogados-24h","agua-gaz","auto-escolas","acougues","cartorios","casa-festas","ceasa","celulares","chaveiro-24h","classificados","clinicas-reabilitacao","construcao","contabilidades","contadores","cras-creas","cursos","delegacias","eletricas","eletricista-24h","emergencias","empregos","encanador","escolas","esteticas","faculdades","farmacias-24h","floriculturas","funerarias","gaz-agua","graficas","hospitais","hoteis-moteis","imobiliarias","imoveis","informatica","lotericas","moto-taxi","oficinas-24h","onibus","orgaos-publicos","otica","padarias","pet-shop24h","postos-saude","saude","tatuagens","taxi","variedades","veterinarios-24h","vidracarias"
 ];
 
 const fotos = {
@@ -57,10 +58,12 @@ const fotos = {
 "padarias":"https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400",
 "pet":"https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400",
 "imoveis":"https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400",
-"taxi":"https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400"
+"taxi":"https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400",
+"ceasa":"https://images.unsplash.com/photo-1542838132-92c53300491e?w=400"
 };
 
 function fotoPara(pasta){
+  if(pasta==="ceasa" || pasta==="cesa") return fotos["ceasa"];
   if(pasta.includes("advogado")) return fotos["advogados-24h"];
   if(pasta.includes("academia")) return fotos["academias"];
   if(pasta.includes("emprego")) return fotos["empregos"];
@@ -77,9 +80,11 @@ function fotoPara(pasta){
 document.getElementById('cont').textContent = pastas.length + " SERVIÇOS - CLIQUE PARA ABRIR";
 document.getElementById('grid').innerHTML = pastas.map(p => {
   const nome = p.replace(/-/g," ").toUpperCase();
+  // Nome bonito pro CEASA
+  const nomeExibir = p==="ceasa" ? "CEASA" : nome;
   return `<a class="card" href="./${p}/">
-    <img src="${fotoPara(p)}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x220/111/FFD700?text=${encodeURIComponent(nome)}'">
-    <div class="info"><b>${nome}</b><span>ABRIR →</span></div>
+    <img src="${fotoPara(p)}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x220/111/FFD700?text=${encodeURIComponent(nomeExibir)}'">
+    <div class="info"><b>${nomeExibir}</b><span>ABRIR →</span></div>
   </a>`;
 }).join('');
 </script>
