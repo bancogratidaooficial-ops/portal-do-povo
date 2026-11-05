@@ -83,7 +83,7 @@ document.getElementById('grid').innerHTML = pastas.map(p => {
   const nome = p.replace(/-/g," ").toUpperCase();
   // Nome bonito pro CEASA
   const nomeExibir = p==="ceasa" ? "CEASA" : nome;
-  return `<a class="card" href="./${p}/">
+  return `<a class="card" href="${p}">`
     <img src="${fotoPara(p)}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x220/111/FFD700?text=${encodeURIComponent(nomeExibir)}'">
     <div class="info"><b>${nomeExibir}</b><span>ABRIR →</span></div>
   </a>`;
