@@ -25,84 +25,83 @@ h1{font-size:15px;color:#FFD700}h1 span{font-size:10px;color:#aaa;display:block}
 <header>
 <h1>📍 ARAUCÁRIA - PR<span id="cont">Portal do Povo / Paraná / 49 serviços</span></h1>
 <div style="display:flex;gap:6px">
-<a class="btn" href="cidades-pr.html">⬅ VOLTAR PR</a>
-<a class="btn" style="background:#FFD700;color:#000" href="index.html">PORTAL DO POVO</a>
+<a class="btn" href="./cidades-pr/">⬅ VOLTAR PR</a>
+<a class="btn" style="background:#FFD700;color:#000" href="./">PORTAL DO POVO</a>
 </div>
 </header>
 
 <div style="margin:12px;background:#1a1500;border:1px solid #FFD700;border-radius:12px;padding:12px;font-size:11px;color:#ffeeaa">✅ Araucária PR - Clique no serviço para abrir</div>
 
 <div style="padding:0 14px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
-<a class="btn" href="cidades-pr.html">🌲 Cidades PR</a>
-<a class="btn" href="estados.html">🇧🇷 Estados - Brasil</a>
-<a class="btn" href="privacidade.html">🔒 Privacidade</a>
-<a class="btn" href="contato.html">📞 Contato</a>
+<a class="btn" href="./cidades-pr/">🌲 Cidades PR</a>
+<a class="btn" href="./estados/">🇧🇷 Estados - Brasil</a>
+<a class="btn" href="./privacidade/">🔒 Privacidade</a>
+<a class="btn" href="./contato/">📞 Contato</a>
 </div>
 
 <div class="grid" id="grid"></div>
 
 <footer class="footer">
-<a href="index.html">🏠 PORTAL</a>
-<a href="privacidade.html">🔒 PRIVACIDADE</a>
-<a href="contato.html">📞 CONTATO</a>
-<a href="cidades-pr.html">⬅ PARANÁ</a>
+<a href="./">🏠 PORTAL</a>
+<a href="./privacidade/">🔒 PRIVACIDADE</a>
+<a href="./contato/">📞 CONTATO</a>
+<a href="./cidades-pr/">⬅ PARANÁ</a>
 </footer>
 
 <script>
-const servicos = [
-["chaveiro-24h-araucaria.html","CHAVEIRO 24H","https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400"],
-["animais-ong-hospital-araucaria.html","ANIMAIS / ONG","https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400"],
-["cartorios-araucaria.html","CARTÓRIOS","https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400"],
-["academias-araucaria.html","ACADEMIAS","https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400"],
-["advogados-24h-araucaria.html","ADVOGADOS 24H","https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400"],
-["agua-gaz-araucaria.html","ÁGUA E GÁS","https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400"],
-["auto-escolas-araucaria.html","AUTO ESCOLAS","https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400"],
-["acougues-araucaria.html","AÇOUGUES","https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400"],
-["casa-festas-araucaria.html","CASA DE FESTAS","https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400"],
-["celulares-araucaria.html","CONSERTOS CELULAR","https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400"],
-["clinicas-reabilitacao-araucaria.html","CLÍNICAS REABILITAÇÃO","https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400"],
-["construcao-araucaria.html","CONSTRUÇÃO","https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400"],
-["contabilidades-araucaria.html","CONTABILIDADES","https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400"],
-["contadores-araucaria.html","CONTADORES","https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400"],
-["cras-creas-araucaria.html","CRAS / CREAS","https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=400"],
-["cursos-araucaria.html","CURSOS","https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400"],
-["delegacias-araucaria.html","DELEGACIAS","https://images.unsplash.com/photo-1453873531674-2151bcd01707?w=400"],
-["eletricas-araucaria.html","ELÉTRICA","https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400"],
-["eletricista-24h-araucaria.html","ELETRICISTA 24H","https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400"],
-["empregos-araucaria.html","EMPREGOS","https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400"],
-["encanador-24h-araucaria.html","ENCANADOR 24H","https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400"],
-["escolas-araucaria.html","ESCOLAS","https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400"],
-["esteticas-araucaria.html","ESTÉTICAS","https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=400"],
-["faculdades-araucaria.html","FACULDADES","https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400"],
-["farmacias-24h-araucaria.html","FARMÁCIAS 24H","https://images.unsplash.com/photo-1585435557343-3b092031a831?w=400"],
-["floriculturas-araucaria.html","FLORICULTURAS","https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400"],
-["funerarias-araucaria.html","FUNERÁRIAS","https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=400"],
-["graficas-araucaria.html","GRÁFICAS","https://images.unsplash.com/photo-1562654501-a0ccc0fc3b4b?w=400"],
-["hospitais-upas-24h-araucaria.html","HOSPITAIS E UPAS 24H","https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400"],
-["hoteis-moteis-araucaria.html","HOTÉIS E MOTÉIS","https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400"],
-["imobiliarias-araucaria.html","IMOBILIÁRIAS","https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400"],
-["imoveis-araucaria.html","IMÓVEIS","https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400"],
-["informatica-araucaria.html","INFORMÁTICA","https://images.unsplash.com/photo-1518770660439-4636190af475?w=400"],
-["lotericas-araucaria.html","LOTÉRICAS","https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=400"],
-["moto-taxi-araucaria.html","MOTO TÁXI","https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=400"],
-["oficinas-24h-araucaria.html","OFICINAS 24H","https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=400"],
-["onibus-araucaria.html","ÔNIBUS","https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400"],
-["orgaos-publicos-araucaria.html","ÓRGÃOS PÚBLICOS","https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400"],
-["oticas-araucaria.html","ÓTICAS","https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400"],
-["padarias-araucaria.html","PADARIAS","https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400"],
-["pet-shop-24h-araucaria.html","PET SHOP 24H","https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=400"],
-["postos-saude-araucaria.html","POSTOS SAÚDE","https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400"],
-["saude-araucaria.html","SAÚDE","https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=400"],
-["tatuagens-araucaria.html","TATUAGENS","https://images.unsplash.com/photo-1542727365-19732a80dcfd?w=400"],
-["taxi-araucaria.html","TÁXI","https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400"],
-["variedades-araucaria.html","VARIEDADES","https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400"],
-["veterinarios-24h-araucaria.html","VETERINÁRIOS 24H","https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400"],
-["vidracaria-araucaria.html","VIDRAÇARIA","https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400"]
+const pastas = [
+["chaveiro-24h","CHAVEIRO 24H","https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400"],
+["animais-ong-hospital","ANIMAIS / ONG","https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400"],
+["cartorios","CARTÓRIOS","https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400"],
+["academias","ACADEMIAS","https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400"],
+["advogados-24h","ADVOGADOS 24H","https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400"],
+["agua-gaz","ÁGUA E GÁS","https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400"],
+["auto-escolas","AUTO ESCOLAS","https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400"],
+["acougues","AÇOUGUES","https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400"],
+["casa-festas","CASA DE FESTAS","https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400"],
+["celulares","CONSERTOS CELULAR","https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400"],
+["clinicas-reabilitacao","CLÍNICAS REABILITAÇÃO","https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400"],
+["construcao","CONSTRUÇÃO","https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400"],
+["contabilidades","CONTABILIDADES","https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400"],
+["contadores","CONTADORES","https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400"],
+["cras-creas","CRAS / CREAS","https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=400"],
+["cursos","CURSOS","https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400"],
+["delegacias","DELEGACIAS","https://images.unsplash.com/photo-1453873531674-2151bcd01707?w=400"],
+["eletricas","ELÉTRICA","https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400"],
+["eletricista-24h","ELETRICISTA 24H","https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400"],
+["empregos","EMPREGOS","https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400"],
+["encanador","ENCANADOR 24H","https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400"],
+["escolas","ESCOLAS","https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400"],
+["esteticas","ESTÉTICAS","https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=400"],
+["faculdades","FACULDADES","https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400"],
+["farmacias-24h","FARMÁCIAS 24H","https://images.unsplash.com/photo-1585435557343-3b092031a831?w=400"],
+["floriculturas","FLORICULTURAS","https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400"],
+["funerarias","FUNERÁRIAS","https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=400"],
+["graficas","GRÁFICAS","https://images.unsplash.com/photo-1562654501-a0ccc0fc3b4b?w=400"],
+["hospitais","HOSPITAIS E UPAS 24H","https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400"],
+["hoteis-moteis","HOTÉIS E MOTÉIS","https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400"],
+["imobiliarias","IMOBILIÁRIAS","https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400"],
+["imoveis","IMÓVEIS","https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400"],
+["informatica","INFORMÁTICA","https://images.unsplash.com/photo-1518770660439-4636190af475?w=400"],
+["lotericas","LOTÉRICAS","https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=400"],
+["moto-taxi","MOTO TÁXI","https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=400"],
+["oficinas-24h","OFICINAS 24H","https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=400"],
+["onibus","ÔNIBUS","https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400"],
+["orgaos-publicos","ÓRGÃOS PÚBLICOS","https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400"],
+["otica","ÓTICAS","https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400"],
+["padarias","PADARIAS","https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400"],
+["pet-shop24h","PET SHOP 24H","https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=400"],
+["postos-saude","POSTOS SAÚDE","https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400"],
+["saude","SAÚDE","https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=400"],
+["tatuagens","TATUAGENS","https://images.unsplash.com/photo-1542727365-19732a80dcfd?w=400"],
+["taxi","TÁXI","https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400"],
+["variedades","VARIEDADES","https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400"],
+["veterinarios-24h","VETERINÁRIOS 24H","https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400"],
+["vidracarias","VIDRAÇARIA","https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400"]
 ];
-
-document.getElementById('cont').textContent = servicos.length + " SERVIÇOS - CLIQUE PARA ABRIR";
-document.getElementById('grid').innerHTML = servicos.map(s => {
-  return `<a class="card" href="${s[0]}">
+document.getElementById('cont').textContent = pastas.length + " SERVIÇOS - CLIQUE PARA ABRIR";
+document.getElementById('grid').innerHTML = pastas.map(s => {
+  return `<a class="card" href="./${s[0]}/">
     <img src="${s[2]}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x220/111/FFD700?text=${encodeURIComponent(s[1])}'">
     <div class="info"><b>${s[1]}</b><span>ABRIR →</span></div>
   </a>`;
